@@ -35,12 +35,12 @@ export default function HomePage() {
         data={{
           '@context': 'https://schema.org',
           '@type': 'WebPage',
-          name: 'Portfolio | Your Name',
+          name: 'Portfolio | Kaialan Razz',
           description: 'Explore my projects in web development, UI/UX design and creative coding',
           url: 'https://your-portfolio-domain.com',
           author: {
             '@type': 'Person',
-            name: 'Your Name',
+            name: 'Kaialan Razz',
           },
         }}
       />
