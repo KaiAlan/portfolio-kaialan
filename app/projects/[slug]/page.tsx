@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { getProject, getAllProjectSlugs } from '@/lib/projects'
 import StructuredData from '@/components/StructuredData'
@@ -11,8 +11,9 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for each project dynamically
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const project = await getProject(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const project = await getProject(slug)
   
   if (!project) {
     return {
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title: `${project.title} | Your Name`,
       description: project.description,
-      url: `https://your-portfolio-domain.com/projects/${params.slug}`,
+      url: `https://your-portfolio-domain.com/projects/${slug}`,
       type: 'article',
       images: [
         {
@@ -43,13 +44,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: [project.twitterImage || '/images/project-default-twitter.jpg'],
     },
     alternates: {
-      canonical: `https://your-portfolio-domain.com/projects/${params.slug}`,
+      canonical: `https://your-portfolio-domain.com/projects/${slug}`,
     },
   }
 }
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = await getProject(params.slug)
+const ProjectPage = async({ params }: { params: Promise<{ slug: string }> }) => {
+  const {slug} = await params
+  const project = await getProject(slug)
   
   if (!project) {
     notFound()
@@ -70,7 +72,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
           description: project.description,
           datePublished: project.date,
           image: project.images[0],
-          url: `https://your-portfolio-domain.com/projects/${params.slug}`,
+          url: `https://your-portfolio-domain.com/projects/${slug}`,
           keywords: project.tags.join(', '),
         }}
       />
@@ -83,3 +85,5 @@ export default async function ProjectPage({ params }: { params: { slug: string }
     </>
   )
 }
+
+export default ProjectPage

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
+// import Image from 'next/image'
+// import Link from 'next/link'
 // import ProjectGallery from '@/components/ProjectGallery'
 import StructuredData from '@/components/StructuredData'
 

@@ -6,7 +6,7 @@ export default function ProjectNotFound() {
     <main className="flex flex-col items-center justify-center min-h-screen px-4 py-16 text-center">
       <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">Project Not Found</h1>
       <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-md">
-        The project you're looking for doesn't exist or may have been moved.
+        The project you are looking for does not exist or may have been moved.
       </p>
       <div className="mt-8 flex flex-col sm:flex-row gap-4">
         <Link

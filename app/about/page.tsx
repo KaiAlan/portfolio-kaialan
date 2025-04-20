@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+// import Image from 'next/image'
 import StructuredData from '@/components/StructuredData'
 
 export const metadata: Metadata = {

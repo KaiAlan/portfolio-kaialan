@@ -36,7 +36,7 @@ const OptimizedImage = ({
 }: OptimizedImageProps) => {
   const [imageSrc, setImageSrc] = useState<typeof src>(src);
   const [isLoading, setIsLoading] = useState(true);
-  const [_hasError, setHasError] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "200px 0px",
