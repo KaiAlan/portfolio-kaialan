@@ -1,10 +1,12 @@
 import { getAllProjects } from "@/lib/projects"
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+
 export default async function sitemap() {
   const projects = await getAllProjects()
 
   const projectUrls = projects.map((project) => ({
-    url: `https://your-portfolio-domain.com/projects/${project.slug}`,
+    url: `${siteUrl}/projects/${project.slug}`,
     lastModified: project.updatedAt || new Date(),
     changeFrequency: 'monthly',
     priority: 0.8,
@@ -12,13 +14,13 @@ export default async function sitemap() {
 
   return [
     {
-      url: 'https://your-portfolio-domain.com',
+      url: `${siteUrl}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://your-portfolio-domain.com/about',
+      url: `${siteUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
