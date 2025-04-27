@@ -7,7 +7,7 @@ import OptimizedImage from "@/components/images/optimized-image-component";
 import Image from "next/image";
 import { thumbnailData } from "@/data/thumbnails";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+const siteUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? 'http://localhost:3000'
 
 
 export const metadata: Metadata = {
