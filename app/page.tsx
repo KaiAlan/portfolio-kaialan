@@ -6,9 +6,12 @@ import StructuredData from "@/components/StructuredData";
 import OptimizedImage from "@/components/images/optimized-image-component";
 import Image from "next/image";
 import { thumbnailData } from "@/data/thumbnails";
+import Link from "next/link";
+import MasonaryWithGrid from "@/components/masonary-layout/masonary-layout-with-grid";
+import Sidebar from "@/components/navbar/sidebar";
 
-const siteUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? 'http://localhost:3000'
-
+const siteUrl =
+  process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   title: "Kaialan Razz",
@@ -54,24 +57,30 @@ export default function HomePage() {
           },
         }}
       />
-      <main className="w-full px-8 text-[12px]">
+      <main className="w-full px-4 text-[12px] bg-[#FAFAFA]">
         {/* Homepage content here */}
         {/* <ProjectGallery /> */}
-        <section className="w-full mt-96">
-          <div className="w-full columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        {/* <section className="relative w-full flex"> */}
+          {/* <Sidebar /> */}
+          {/* <div className="w-full columns-1 sm:columns-2 md:columns-3 lg:columns-3 gap-16 space-y-16 py-12">
             {thumbnailData.map((data, index) => (
-              <Image
-                key={index}
-                src={data.src}
-                alt={data.name}
-                width={0}
-                height={0}
-                className="w-full h-auto"
-              />
+              <div className="flex flex-col gap-8">
+                <Image
+                  key={index}
+                  src={data.src}
+                  alt={data.name}
+                  width={0}
+                  height={0}
+                  className="w-full h-auto"
+                />
+                <p></p>
+              </div>
             ))}
-            
+          </div> */}
+          <div className="w-full py-12">
+            <MasonaryWithGrid />
           </div>
-        </section>
+        {/* </section> */}
       </main>
     </>
   );
