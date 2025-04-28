@@ -36,7 +36,7 @@ const Sidebar = () => {
             {/* <span className="w-8 h-8 rounded-sm bg-gray-300"></span> */}
             <div>
               <p className="uppercase">About</p>
-              <p className="text-[#929292]">Let's get to know each other</p>
+              <p className="text-[#929292]">Let us get to know each other</p>
             </div>
           </Button>
       </div>
