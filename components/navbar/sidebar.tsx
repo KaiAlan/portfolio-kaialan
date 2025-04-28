@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 const Sidebar = () => {
   return (
-    <aside className="sticky top-0 left-0 w-96 h-screen py-8 px-4 border-r border-gray-200 bg-[#fafafa]">
+    <aside className="sticky top-0 left-0 w-80 h-screen py-8 px-4 border-r border-gray-200 bg-[#fafafa]">
       <div className="flex flex-col justify-start items-start gap-1">
         <Link href="/">
           <div className="flex gap-1 items-end justify-start w-full">
@@ -32,7 +32,7 @@ const Sidebar = () => {
               <p className="text-[#929292]">A selection of recent works</p>
             </div>
           </Button>
-          <Button variant='secondary' className="text-left justify-start rounded-sm font-mono text-[12px] h-full p-4">
+          <Button variant='secondary' className="text-left justify-start rounded-sm font-mono text-[12px] h-full p-4 cursor-not-allowed">
             {/* <span className="w-8 h-8 rounded-sm bg-gray-300"></span> */}
             <div>
               <p className="uppercase">About</p>
@@ -45,23 +45,27 @@ const Sidebar = () => {
             {/* <span className="w-8 h-8 rounded-sm bg-gray-300"></span> */}
             <div>
               <p className="uppercase">Email</p>
-              <p className="text-[#929292]">dev.kaialan@gmail.com</p>
+              <p className="text-[#929292] select-text">dev.kaialan@gmail.com</p>
             </div>
           </Button>
-          <Button variant='secondary' className="text-left justify-start rounded-sm font-mono text-[12px] h-full p-4 hover:outline-2 hover:outline-gray-600">
-            {/* <span className="w-8 h-8 rounded-sm bg-gray-300"></span> */}
-            <div>
-              <p className="uppercase">x/twitter</p>
-              <p className="text-[#929292]">@kaialan_</p>
-            </div>
-          </Button>
-          <Button variant='secondary' className="text-left justify-start rounded-sm font-mono text-[12px] h-full p-4 hover:outline-2 hover:outline-gray-600">
-            {/* <span className="w-8 h-8 rounded-sm bg-gray-300"></span> */}
-            <div>
-              <p className="uppercase">LinkedIn</p>
-              <p className="text-[#929292]">@kaialan</p>
-            </div>
-          </Button>
+          <Link href='https://x.com/kaialan_' className="w-full h-full cursor-pointer">
+            <Button variant='secondary' className="w-full text-left justify-start rounded-sm font-mono text-[12px] h-full p-4 hover:outline-2 hover:outline-gray-600 cursor-pointer">
+              {/* <span className="w-8 h-8 rounded-sm bg-gray-300"></span> */}
+              <div>
+                <p className="uppercase">x/twitter</p>
+                <p className="text-[#929292]">@kaialan_</p>
+              </div>
+            </Button>
+          </Link>
+          <Link href='https://linkedin.com/in/kaialan' className="w-full cursor-pointer">
+            <Button variant='secondary' className="w-full text-left justify-start rounded-sm font-mono text-[12px] h-full p-4 hover:outline-2 hover:outline-gray-600 cursor-pointer">
+              {/* <span className="w-8 h-8 rounded-sm bg-gray-300"></span> */}
+              <div>
+                <p className="uppercase">LinkedIn</p>
+                <p className="text-[#929292]">@kaialan</p>
+              </div>
+            </Button>
+          </Link>
           {/* <Button variant='secondary' className="text-left justify-start rounded-sm font-mono text-[12px] h-full p-4 hover:outline-2 hover:outline-gray-600">
             <span className="w-8 h-8 rounded-sm bg-gray-300"></span>
             <div>

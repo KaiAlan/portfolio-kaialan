@@ -15,73 +15,75 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  themeColor: '#000000',
-}
+  themeColor: "#000000",
+};
 
-const siteUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? 'http://localhost:3000'
-
+const siteUrl =
+  process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${siteUrl}`),
   title: {
-    template: '%s | Kaialan Razz',
-    default: 'Kaialan Razz | Developer & Designer',
+    template: "%s | Kaialan Razz",
+    default: "Kaialan Razz | Developer & Designer",
   },
-  description: 'Professional portfolio showcasing my work in web development, design and creative coding',
-  keywords: ['typescript', 'next.js', 'web developer', 'designer', 'portfolio'],
-  authors: [{ name: 'Kaialan Razz', url: `${siteUrl}` }],
-  creator: 'Kaialan Razz',
-  publisher: 'Kaialan Razz',
+  description:
+    "Professional portfolio showcasing my work in web development, design and creative coding",
+  keywords: ["typescript", "next.js", "web developer", "designer", "portfolio"],
+  authors: [{ name: "Kaialan Razz", url: `${siteUrl}` }],
+  creator: "Kaialan Razz",
+  publisher: "Kaialan Razz",
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-image-preview': 'large',
-      'max-video-preview': -1,
-      'max-snippet': -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
     },
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    type: "website",
+    locale: "en_US",
     url: `${siteUrl}`,
-    siteName: 'Kaialan Razz',
-    title: 'Kaialan Razz | Developer & Designer',
-    description: 'Professional portfolio showcasing my work in web development, design and creative coding',
+    siteName: "Kaialan Razz",
+    title: "Kaialan Razz | Developer & Designer",
+    description:
+      "Professional portfolio showcasing my work in web development, design and creative coding",
     images: [
       {
-        url: '/images/og-default.jpg',
+        url: "/images/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: 'Kaialan Razz',
+        alt: "Kaialan Razz",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@kaialan_',
-    creator: '@kaialan_',
-    title: 'Kaialan | UI/UX and Graphics Designer',
-    description: 'Professional portfolio showcasing my work in web development, design and creative coding',
-    images: ['/images/twitter-default.jpg'],
+    card: "summary_large_image",
+    site: "@kaialan_",
+    creator: "@kaialan_",
+    title: "Kaialan | UI/UX and Graphics Designer",
+    description:
+      "Professional portfolio showcasing my work in web development, design and creative coding",
+    images: ["/images/twitter-default.jpg"],
   },
   verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code', // if needed
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code", // if needed
   },
   alternates: {
     canonical: `${siteUrl}`,
     languages: {
-      'en-US': `${siteUrl}`,
+      "en-US": `${siteUrl}`,
       // Add other language versions if you have them
     },
   },
-}
-
+};
 
 export default function RootLayout({
   children,
@@ -91,14 +93,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-center items-center mx-auto relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-center items-center mx-auto relative bg-[#fafafa]`}
       >
         {/* <Navbar /> */}
-         <section className="relative w-full flex">
-
-        <Sidebar />
-      {children}
-         </section>
+        <section className="relative w-full flex">
+          <Sidebar />
+          {children}
+        </section>
       </body>
     </html>
   );
