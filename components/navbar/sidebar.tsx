@@ -23,7 +23,7 @@ const Sidebar = () => {
           Elevating brands with stunning design.
         </p> */}
       </div>
-      <p className="text-[#929292] text-[12px] py-4">UI/UX and Graphics designer, currently Freelancing, building things that hopefully encourage us to lead more thoughtful lives.</p>
+      <p className="text-gray-500 text-[12px] py-4">UI/UX and Graphics designer, currently Freelancing, building things that hopefully encourage us to lead more thoughtful lives.</p>
       <div className="w-full flex flex-col gap-2 py-8">
           <Button variant='secondary' className="text-left justify-start rounded-sm font-mono text-[12px] h-full p-4 border border-gray-500">
             {/* <span className="w-8 h-8 rounded-sm bg-gray-300"></span> */}
