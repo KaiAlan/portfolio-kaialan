@@ -57,7 +57,7 @@ export default function HomePage() {
           },
         }}
       />
-      <main className="w-full px-4 text-[12px] bg-[#FAFAFA]">
+      <main className="w-full px-4 text-[12px]">
         {/* Homepage content here */}
         {/* <ProjectGallery /> */}
         {/* <section className="relative w-full flex"> */}
