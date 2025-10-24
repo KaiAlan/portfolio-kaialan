@@ -3,6 +3,7 @@ import { Roboto_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import Sidebar from "@/components/navbar/sidebar";
+import Topbar from "@/components/navbar/topbar";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -100,7 +101,10 @@ export default function RootLayout({
         {/* <Navbar /> */}
         <section className="relative w-full flex">
           <Sidebar />
+          <main className="w-full flex flex-col justify-start items-start gap-0">
+            <Topbar />
           {children}
+          </main>
         </section>
       </body>
     </html>

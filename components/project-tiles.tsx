@@ -1,0 +1,104 @@
+import { Project, showcaseProject } from "@/data/projects/showcase";
+import OptimizedImage from "./images/optimized-image-component";
+import { Button } from "./ui/button";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Cross2Icon } from "@radix-ui/react-icons";
+
+const ProjectTile = () => {
+  return (
+    <div className="relative w-full flex flex-col px-5">
+      <div className="sticky top-0 z-10 bg-[#FCFCFC] w-full h-16 flex justify-between items-center">
+        <h2>My Works</h2>
+        <div>
+          <Button variant="secondary" className="w-2xs">
+            All
+          </Button>
+        </div>
+      </div>
+
+      {/* <div className="w-full columns-1 tablet:columns-2 laptop:columns-3 gap-5">
+        {showcaseProject.map((project) => {
+          return(
+            <SingleCell
+              name={project.name}
+              href={project.thumbnail}
+            />
+          )
+        })}
+      </div> */}
+      {/* <span className="w-full h-16"></span> */}
+
+      <div className="w-full grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 gap-5">
+        {showcaseProject.map((project, index) => {
+          return <SingleCell key={index} project={project} />;
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default ProjectTile;
+
+const CellPreview = ({ name, href }: { name: string; href: string }) => {
+  return (
+    <div className="group relative mb-5 w-full aspect-3/2 max-w-2xl bg-[#F6F6F5] rounded-sm hover:scale-95 transition-all duration-300 p-12">
+      <OptimizedImage
+        className="w-full select-none transition-all"
+        src={href}
+        alt={name}
+        width={3}
+        height={2}
+      />
+      <span className="absolute bottom-2 left-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white rounded-sm text-xs text-black p-2 transition-all">
+        {name}
+      </span>
+    </div>
+  );
+};
+
+const SingleCell = ({ project }: { project: Project }) => {
+  return (
+    <Drawer>
+      <DrawerTrigger>
+        <CellPreview name={project.name} href={project.thumbnail} />
+      </DrawerTrigger>
+      <DrawerContent className="max-h-[90vh] flex flex-col">
+        <ScrollArea className="relative h-full overflow-y-auto p-4">
+          <div className="sticky top-0 z-10 flex justify-end bg-white">
+            <DrawerClose>
+              <Button
+                variant="ghost"
+                className="rounded-full w-16 h-16 cursor-pointer"
+              >
+                <Cross2Icon className="radix-icon w-8 h-8" />
+              </Button>
+            </DrawerClose>
+          </div>
+          <DrawerHeader>
+            <DrawerTitle>{project.name}</DrawerTitle>
+            <DrawerDescription className="sr-only">This action cannot be undone.</DrawerDescription>
+          </DrawerHeader>
+          <div className="w-full h-full pb-20 flex flex-col">
+            <OptimizedImage
+              className="w-1/2 aspect-4/3 select-none transition-all"
+              src={project.thumbnail}
+              alt={project.name}
+              width={3}
+              height={2}
+            />
+          </div>
+        </ScrollArea>
+      </DrawerContent>
+    </Drawer>
+  );
+};

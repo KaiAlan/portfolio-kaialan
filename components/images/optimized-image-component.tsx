@@ -156,7 +156,7 @@ const OptimizedImage = ({
       >
         {/* Skeleton Loader */}
         {isLoading && (
-          <div className="absolute inset-0 bg-muted animate-pulse" />
+          <div className="absolute inset-0 bg-[#F6F6F5] animate-pulse" />
         )}
 
         {/* Image */}

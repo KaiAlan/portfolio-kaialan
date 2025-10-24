@@ -9,6 +9,7 @@ import { thumbnailData } from "@/data/thumbnails";
 import Link from "next/link";
 import MasonaryWithGrid from "@/components/masonary-layout/masonary-layout-with-grid";
 import Sidebar from "@/components/navbar/sidebar";
+import ProjectTile from "@/components/project-tiles";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "http://localhost:3000";
@@ -57,7 +58,7 @@ export default function HomePage() {
           },
         }}
       />
-      <main className="w-full px-4 text-[12px]">
+      <main className="w-full text-[12px]">
         {/* Homepage content here */}
         {/* <ProjectGallery /> */}
         {/* <section className="relative w-full flex"> */}
@@ -77,9 +78,10 @@ export default function HomePage() {
               </div>
             ))}
           </div> */}
-          <div className="w-full py-12">
-            <MasonaryWithGrid />
-          </div>
+          {/* <div className="w-full"> */}
+            {/* <MasonaryWithGrid /> */}
+            <ProjectTile />
+          {/* </div> */}
         {/* </section> */}
       </main>
     </>
