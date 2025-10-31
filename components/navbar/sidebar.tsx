@@ -1,11 +1,12 @@
 "use client";
 
-import { cloneElement } from "react";
+import { cloneElement, useState } from "react";
 import Link from "next/link";
 import OptimizedImage from "../images/optimized-image-component";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import {
+  CheckCircledIcon,
   CubeIcon,
   DashboardIcon,
   EnvelopeClosedIcon,
@@ -14,115 +15,106 @@ import {
   TransformIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
+import { Button } from "../ui/button";
 
 const navLinks = [
   {
     href: ["/", "/all", "/ui-ux", "/graphics", "/branding"],
     label: "My Works",
     icon: <CubeIcon />,
+    color: "rose-500",
   },
-  { href: ["/gallery"], label: "Gallery", icon: <DashboardIcon /> },
-  { href: ["/about-me"], label: "About Me", icon: <FaceIcon /> },
-  { href: ["/services"], label: "Services", icon: <TransformIcon /> },
+  {
+    href: ["/gallery"],
+    label: "Gallery",
+    icon: <DashboardIcon />,
+    color: "blue-500",
+  },
+  {
+    href: ["/about-me"],
+    label: "About Me",
+    icon: <FaceIcon />,
+    color: "yellow-500",
+  },
+  {
+    href: ["/services"],
+    label: "Services",
+    icon: <TransformIcon />,
+    color: "teal-500",
+  },
 ];
 
-const socialLinks = [
-  { href: "", label: "LinkedIn", icon: <LinkedInLogoIcon /> },
-  { href: "", label: "X/Twitter", icon: <TwitterLogoIcon /> },
-  { href: "", label: "Email", icon: <EnvelopeClosedIcon /> },
-];
+// const socialLinks = [
+//   { href: "", label: "LinkedIn", icon: <LinkedInLogoIcon /> },
+//   { href: "", label: "X/Twitter", icon: <TwitterLogoIcon /> },
+//   { href: "", label: "Email", icon: <EnvelopeClosedIcon /> },
+// ];
 
 const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <aside className="sticky top-0 left-0 w-[220px] h-screen">
-      <div className="w-[220px] h-full flex flex-col gap-6 px-5 border-r border-r-[#EBEBEB]">
-        <div className="w-full flex flex-col justify-start items-start">
-          <div className="w-full h-16 flex flex-col justify-center items-center gap-1">
-            <Link href="/" className="w-full flex justify-start items-center">
-              <div className="flex gap-2 items-center justify-start w-full">
-                <OptimizedImage
-                  src="/images/profile.png"
-                  alt="profile image"
-                  className="w-8 rounded-full bg-pink-400"
-                />
-                <p className="text-base w-full h-full font-mono">
-                  Kaialan Razz
-                </p>
-              </div>
-            </Link>
-          </div>
-          <p className="text-[#929292] text-xs">
-            UI/UX and Graphics designer, currently Freelancing, building things
-            that hopefully encourage us to lead more thoughtful lives.
-          </p>
-        </div>
-        <div className="w-full flex flex-col gap-1">
-          {navLinks.map((item) => {
-            return (
-              <Link
-                href={item.href[0]}
-                className={cn(
-                  "group w-full h-full flex justify-start rounded-[11px] cursor-pointer p-1 gap-2",
-                  item.href.includes(pathname)
-                    ? "bg-[#f1f1f1] border-[0.5px] border-[#EAEAEA]"
-                    : ""
-                )}
-              >
-                <div
-                  className={cn(
-                    "w-7 h-7 flex justify-center items-center rounded-[7px] shrink-0",
-                    item.href.includes(pathname)
-                      ? "bg-white border border-[#EAEAEA]"
-                      : ""
-                  )}
-                >
-                  {cloneElement(item.icon, {
-                    color: item.href.includes(pathname) ? "#000000" : "#808080",
-                  })}
-                </div>
-                <div className="w-full h-full flex justify-start items-center">
-                  <span
-                    className={cn(
-                      "text-xs font-medium",
-                      item.href.includes(pathname)
-                        ? "text-black"
-                        : "text-[#808080]"
-                    )}
-                  >
-                    {item.label}
-                  </span>
+    <aside className="sticky top-0 left-0 w-[220px] h-screen bg-[#FCFCFC]">
+      <div className="w-[220px] h-full flex flex-col justify-between items-center gap-6 px-5 border-r border-r-[#EBEBEB]">
+        <div className="w-full flex flex-col gap-6">
+          <div className="w-full flex flex-col justify-start items-start">
+            <div className="w-full h-16 flex flex-col justify-center items-center gap-1">
+              <Link href="/" className="w-full flex justify-start items-center">
+                <div className="flex gap-2 items-center justify-start w-full">
+                  <OptimizedImage
+                    src="/images/profile.png"
+                    alt="profile image"
+                    className="w-8 rounded-full bg-pink-400"
+                  />
+                  <p className="text-base w-full h-full font-mono">
+                    Kaialan Razz
+                  </p>
                 </div>
               </Link>
-            );
-          })}
-        </div>
-        <div className="w-full flex flex-col justify-start items-start gap-4">
-          <span className="text-xs text-[#A7A7A7] font-medium">Socials</span>
+            </div>
+            <p className="text-[#929292] text-xs">
+              UI/UX and Brand designer, currently Freelancing, building things
+              that hopefully encourage us to lead more thoughtful lives.
+            </p>
+          </div>
           <div className="w-full flex flex-col gap-1">
-            {socialLinks.map((item) => {
+            {navLinks.map((item, index) => {
               return (
                 <Link
-                  href={item.href}
+                  key={index}
+                  href={item.href[0]}
                   className={cn(
-                    "group w-full h-full flex justify-start rounded-[11px] cursor-pointer p-1 gap-2 hover:bg-[#f1f1f1] hover:border-[0.5px] hover:border-[#EAEAEA]"
+                    "group w-full h-full flex justify-start rounded-[11px] cursor-pointer p-1 gap-2 hover:bg-[#f1f1f1] hover:border-[0.5px] hover:border-[#EAEAEA]",
+                    item.href.includes(pathname)
+                      ? "bg-[#f1f1f1] border-[0.5px] border-[#EAEAEA]"
+                      : ""
                   )}
                 >
                   <div
                     className={cn(
-                      "w-7 h-7 flex justify-center items-center rounded-[7px] shrink-0 hover:bg-white hover:border-[0.5px] hover:border-[#EAEAEA]"
+                      "w-7 h-7 flex justify-center items-center rounded-[7px] shrink-0 group-hover:bg-white group-hover:border-[0.5px] group-hover:border-[#EAEAEA]",
+                      item.href.includes(pathname)
+                        ? "bg-white border border-[#EAEAEA]"
+                        : ""
                     )}
                   >
-                    {cloneElement(item.icon, {
-                      color: item.href.includes(pathname)
-                        ? "#000000"
-                        : "#808080",
-                    })}
+                    <span
+                      className={cn(
+                        `group-hover:text-${item.color}`,
+                        item.href.includes(pathname)
+                          ? `text-${item.color}`
+                          : "text-gray-400"
+                      )}
+                    >
+                      {cloneElement(item.icon)}
+                    </span>
                   </div>
                   <div className="w-full h-full flex justify-start items-center">
                     <span
                       className={cn(
-                        "text-xs font-medium text-[#808080] hover:text-black"
+                        "text-xs font-medium group-hover:text-black",
+                        item.href.includes(pathname)
+                          ? "text-black"
+                          : "text-[#808080]"
                       )}
                     >
                       {item.label}
@@ -132,10 +124,133 @@ const Sidebar = () => {
               );
             })}
           </div>
+          <div className="w-full flex flex-col justify-start items-start gap-4">
+            <span className="text-xs text-[#A7A7A7] font-medium">Socials</span>
+            <SocialButtons />
+          </div>
         </div>
+        <HireMeCard />
       </div>
     </aside>
   );
 };
 
 export default Sidebar;
+
+const SocialButtons = () => {
+  const [copied, setCopied] = useState(false);
+  const email = "dev.kaialan@gmail.com";
+
+  const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // prevent mailto from opening
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000); // hide after 2 seconds
+  };
+
+  return (
+    <div className="w-full flex flex-col gap-1">
+      <Link
+        href="www.linkedin.com/in/kaialan"
+        className={cn(
+          "group w-full h-full flex justify-start rounded-[11px] cursor-pointer p-1 gap-2 hover:bg-[#f1f1f1] hover:border-[0.5px] hover:border-[#EAEAEA]"
+        )}
+      >
+        <div
+          className={cn(
+            "w-7 h-7 flex justify-center items-center rounded-[7px] shrink-0 group-hover:bg-white group-hover:border-[0.5px] group-hover:border-[#EAEAEA]"
+          )}
+        >
+          <LinkedInLogoIcon className="text-[#808080] group-hover:text-blue-500" />
+        </div>
+        <div className="w-full h-full flex justify-start items-center">
+          <span
+            className={cn(
+              "text-xs text-[#808080] group-hover:text-black font-medium"
+            )}
+          >
+            LinkedIn
+          </span>
+        </div>
+      </Link>
+      <Link
+        href="https://x.com/kaialan_"
+        className={cn(
+          "group w-full h-full flex justify-start rounded-[11px] cursor-pointer p-1 gap-2 hover:bg-[#f1f1f1] hover:border-[0.5px] hover:border-[#EAEAEA]"
+        )}
+      >
+        <div
+          className={cn(
+            "w-7 h-7 flex justify-center items-center rounded-[7px] shrink-0 group-hover:bg-white group-hover:border-[0.5px] group-hover:border-[#EAEAEA]"
+          )}
+        >
+          <TwitterLogoIcon className="text-[#808080] group-hover:text-black" />
+        </div>
+        <div className="w-full h-full flex justify-start items-center">
+          <span
+            className={cn(
+              "text-xs text-[#808080] group-hover:text-black font-medium"
+            )}
+          >
+            X/Twitter
+          </span>
+        </div>
+      </Link>
+      <Link
+        // href={`mailto:${email}`}
+        href=""
+        onClick={handleCopy}
+        className={cn(
+          "group w-full h-full flex justify-start rounded-[11px] cursor-pointer p-1 gap-2 hover:bg-[#f1f1f1] hover:border-[0.5px] hover:border-[#EAEAEA]"
+        )}
+      >
+        <div
+          className={cn(
+            "w-7 h-7 flex justify-center items-center rounded-[7px] shrink-0 group-hover:bg-white group-hover:border-[0.5px] group-hover:border-[#EAEAEA]"
+          )}
+        >
+          <EnvelopeClosedIcon className="text-[#808080] group-hover:text-green-500" />
+        </div>
+        <div className="relative w-full h-full flex justify-start items-center">
+          <span
+            className={cn(
+              "text-xs text-[#808080] group-hover:text-black font-medium"
+            )}
+          >
+            <span className="group-hover:hidden">Email</span>
+            {/* <span className="hidden group-hover:block"> */}
+            <div className="w-full hidden group-hover:block">
+              {copied ? (
+                <div className="flex justify-center items-center gap-1 text-green-800 text-xs px-2 py-1">
+                  <CheckCircledIcon className="text-green-800" />
+                  copied
+                </div>
+              ) : (
+                <span>Click to copy Email</span>
+              )}
+            </div>
+          </span>
+          {/* </span> */}
+        </div>
+      </Link>
+    </div>
+  );
+};
+
+const HireMeCard = () => {
+
+  // const [ adHidden, setAdHidden ] = useState(false)
+  return (
+    <div className="w-full flex flex-col bg-[#EE5E32] mb-6 rounded-[6px] p-2 gap-5">
+      <div className="w-full flex flex-col justify-start items-start gap-20">
+        <span className="text-white text-sm font-semibold">@kaialan_</span>
+        <p className="text-white text-left text-2xl font-bold leading-8">
+          Crafting ever lasting Experiences & Identities{" "}
+        </p>
+      </div>
+      <Button className="w-full bg-white text-black font-semibold hover:bg-secondary cursor-pointer">
+        Hire me
+      </Button>
+    </div>
+  );
+};

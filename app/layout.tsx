@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto_Mono, Inter } from "next/font/google";
+import { Roboto_Mono, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import Sidebar from "@/components/navbar/sidebar";
@@ -13,6 +13,12 @@ const robotoMono = Roboto_Mono({
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ['latin'],
+  display: 'swap'
+})
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ['latin'],
   display: 'swap'
 })
@@ -96,7 +102,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoMono.variable} ${inter.variable} antialiased flex flex-col justify-center items-center mx-auto relative bg-[#FCFCFC] text-[#000000]`}
+        className={`${robotoMono.variable} ${inter.variable} ${spaceGrotesk.variable} antialiased flex flex-col justify-center items-center mx-auto relative bg-[#FCFCFC] text-[#000000]`}
       >
         {/* <Navbar /> */}
         <section className="relative w-full flex">
