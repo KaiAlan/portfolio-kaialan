@@ -65,7 +65,7 @@ const Sidebar = () => {
                     alt="profile image"
                     className="w-8 rounded-full bg-pink-400"
                   />
-                  <p className="text-base w-full h-full font-mono">
+                  <p className="text-base w-full h-full font-space-grotesk">
                     Kaialan Razz
                   </p>
                 </div>
@@ -241,15 +241,15 @@ const HireMeCard = () => {
 
   // const [ adHidden, setAdHidden ] = useState(false)
   return (
-    <div className="w-full flex flex-col bg-[#EE5E32] mb-6 rounded-[6px] p-2 gap-5">
+    <div className="w-full flex flex-col bg-[#EE5E32] mb-6 rounded-[6px] p-2 gap-5 select-none">
       <div className="w-full flex flex-col justify-start items-start gap-20">
         <span className="text-white text-sm font-semibold">@kaialan_</span>
         <p className="text-white text-left text-2xl font-bold leading-8">
           Crafting ever lasting Experiences & Identities{" "}
         </p>
       </div>
-      <Button className="w-full bg-white text-black font-semibold hover:bg-secondary cursor-pointer">
-        Hire me
+      <Button className="w-full bg-white text-black hover:bg-black hover:text-white font-semibold transition-all cursor-pointer">
+        Book a Call
       </Button>
     </div>
   );

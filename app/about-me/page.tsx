@@ -30,9 +30,9 @@ const AboutMe = () => {
       <div className="w-full flex flex-col gap-20">
         <div className="w-full flex justify-between items-start mb-10">
           <h1 className="font-semibold">About Me</h1>
-          <p className="max-w-2xl text-4xl text-black text-left font-semibold leading-11">
+          <p className="max-w-xl xl:max-w-2xl text-4xl text-black text-left font-semibold leading-11">
             Based in India. Specializing in Web and Mobile (UI/UX) design.
-            Skilled in Branding, motion, prototyping and UX. Defining the
+            Skilled in Branding, motion, prototyping and Framer. Defining the
             future.
           </p>
         </div>
@@ -41,7 +41,7 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="w-full flex justify-end items-end mb-10">
-        <div className="max-w-2xl grid grid-cols-2 gap-y-2 text-black text-xs font-space-grotesk font-medium tracking-wide">
+        <div className="max-w-xl xl:max-w-2xl grid grid-cols-2 gap-y-2 text-black text-xs font-space-grotesk font-medium tracking-wide">
           {left.map((item, i) => (
             <>
               <span key={item}>{item}</span>
