@@ -58,7 +58,7 @@ export default function HomePage() {
           },
         }}
       />
-      <main className="w-full text-[12px]">
+      <section className="w-full text-[12px]">
         {/* Homepage content here */}
         {/* <ProjectGallery /> */}
         {/* <section className="relative w-full flex"> */}
@@ -83,7 +83,7 @@ export default function HomePage() {
             <ProjectTile />
           {/* </div> */}
         {/* </section> */}
-      </main>
+      </section>
     </>
   );
 }

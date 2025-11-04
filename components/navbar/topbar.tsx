@@ -10,6 +10,8 @@ import {
 import { Button } from "../ui/button";
 import confetti from "canvas-confetti";
 import { useRef, useState } from "react";
+import OptimizedImage from "../images/optimized-image-component";
+import Link from "next/link";
 
 const Topbar = () => {
   const router = useRouter();
@@ -62,8 +64,8 @@ const Topbar = () => {
   };
 
   return (
-    <div className="w-full h-16 flex justify-between items-center px-5 border-b border-b-[#EBEBEB]">
-      <div className="flex justify-center items-center gap-2">
+    <div className="sticky top-0 sm:relative w-full h-16 flex justify-between items-center px-5 z-20 bg-[#FCFCFC] border-b border-b-[#EBEBEB]">
+      <div className="hidden sm:flex justify-center items-center gap-2">
         <Button
           variant="secondary"
           className="w-7 h-7 rounded-[7px] shrink-0 cursor-pointer"
@@ -81,6 +83,16 @@ const Topbar = () => {
           <ArrowRightIcon />
         </Button>
       </div>
+      <Link href='/' className='w-full sm:hidden flex justify-start items-center gap-2'>
+        <OptimizedImage
+          src='/images/profile.png'
+          alt='profile'
+          width={16}
+          height={16}
+          className='w-5 h-5 rounded-full'
+        />
+        <h1 className='text-left text-base text-black font-space-grotesk font-medium'>Kaialan Razz</h1>
+      </Link>
       <Button
         ref={buttonRef}
         onClick={handleClick}

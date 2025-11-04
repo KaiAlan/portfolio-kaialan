@@ -19,18 +19,18 @@ const right = [
 
 const AboutMe = () => {
   return (
-    <section className="relative w-full min-h-[calc(100%-64px)] p-5 flex flex-col justify-between items-start gap-8 overflow-hidden">
+    <section className="relative w-full min-h-screen sm:min-h-[calc(100%-64px)] h-full p-5 flex flex-col justify-between items-start gap-8 overflow-hidden">
       <Image
         src='/red-cd.svg'
         alt='red-cd'
         width={100}
         height={100}
-        className="absolute -bottom-32 -left-56 2xl:-bottom-48 2xl:-left-96 w-[600px] 2xl:w-[1000px] -z-1"
+        className="absolute bottom-full -left-32 sm:-bottom-32 sm:-left-56 2xl:-bottom-48 2xl:-left-96 w-[300px] sm:w-[600px] 2xl:w-[1000px] -z-1"
       />
-      <div className="w-full flex flex-col gap-20">
-        <div className="w-full flex justify-between items-start mb-10">
+      <div className="w-full flex flex-col gap-20 mt-96 sm:mt-0">
+        <div className="w-full flex sm:justify-between items-start mb-10 gap-10">
           <h1 className="font-semibold">About Me</h1>
-          <p className="max-w-xl xl:max-w-2xl text-4xl text-black text-left font-semibold leading-11">
+          <p className="max-w-xl xl:max-w-2xl text-2xl sm:text-4xl text-black text-left font-semibold sm:leading-11">
             Based in India. Specializing in Web and Mobile (UI/UX) design.
             Skilled in Branding, motion, prototyping and Framer. Defining the
             future.

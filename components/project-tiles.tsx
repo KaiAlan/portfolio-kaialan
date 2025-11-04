@@ -53,7 +53,7 @@ export default ProjectTile;
 
 const CellPreview = ({ name, href }: { name: string; href: string }) => {
   return (
-    <div className="group relative mb-5 w-full aspect-3/2 max-w-2xl bg-[#F6F6F5] rounded-sm hover:scale-95 transition-all duration-300 p-6 md:p-12">
+    <div className="group relative mb-2 w-full aspect-3/2 max-w-2xl bg-[#F6F6F5] rounded-sm hover:scale-95 transition-all duration-300 p-6 md:p-12">
       <OptimizedImage
         className="w-full select-none transition-all"
         src={href}

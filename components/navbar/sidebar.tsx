@@ -238,7 +238,6 @@ const SocialButtons = () => {
 };
 
 const HireMeCard = () => {
-
   // const [ adHidden, setAdHidden ] = useState(false)
   return (
     <div className="w-full flex flex-col bg-[#EE5E32] mb-6 rounded-[6px] p-2 gap-5 select-none">

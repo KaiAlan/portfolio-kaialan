@@ -18,7 +18,7 @@ export function ReactMasonryCss({ images }: PinterestMasonryProps) {
     1567: 4,
     1200: 3,
     960: 2,
-    640: 1,
+    // 640: 1,
   };
 
   return (
