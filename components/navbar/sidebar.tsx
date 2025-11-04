@@ -53,7 +53,7 @@ const navLinks = [
 const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <aside className="sticky top-0 left-0 w-[220px] h-screen bg-[#FCFCFC]">
+    <aside className="hidden sm:inline-block sticky top-0 left-0 w-[220px] h-screen bg-[#FCFCFC]">
       <div className="w-[220px] h-full flex flex-col justify-between items-center gap-6 px-5 border-r border-r-[#EBEBEB]">
         <div className="w-full flex flex-col gap-6">
           <div className="w-full flex flex-col justify-start items-start">

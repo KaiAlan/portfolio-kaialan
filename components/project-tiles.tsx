@@ -13,11 +13,12 @@ import {
 } from "@/components/ui/drawer";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Cross2Icon } from "@radix-ui/react-icons";
+import MobileHero from "./mobile-hero";
 
 const ProjectTile = () => {
   return (
     <div className="relative w-full flex flex-col px-5">
-      <div className="sticky top-0 z-10 bg-[#FCFCFC] w-full h-16 flex justify-between items-center">
+      <div className="hidden sticky top-0 z-10 bg-[#FCFCFC] w-full h-16 sm:flex justify-between items-center">
         <h2>My Works</h2>
         <div>
           <Button variant="secondary" className="w-2xs">
@@ -25,6 +26,7 @@ const ProjectTile = () => {
           </Button>
         </div>
       </div>
+      <MobileHero />
 
       {/* <div className="w-full columns-1 tablet:columns-2 laptop:columns-3 gap-5">
         {showcaseProject.map((project) => {
@@ -51,7 +53,7 @@ export default ProjectTile;
 
 const CellPreview = ({ name, href }: { name: string; href: string }) => {
   return (
-    <div className="group relative mb-5 w-full aspect-3/2 max-w-2xl bg-[#F6F6F5] rounded-sm hover:scale-95 transition-all duration-300 p-12">
+    <div className="group relative mb-5 w-full aspect-3/2 max-w-2xl bg-[#F6F6F5] rounded-sm hover:scale-95 transition-all duration-300 p-6 md:p-12">
       <OptimizedImage
         className="w-full select-none transition-all"
         src={href}
