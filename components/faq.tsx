@@ -51,10 +51,12 @@ export default function FaqAccordion() {
             className="border-b border-gray-200 focus:outline-none"
           >
             <Accordion.Header>
-              <Accordion.Trigger className="group flex w-full items-center justify-between px-6 py-5 text-lg font-medium font-space-grotesk text-gray-900 text-left transition-colors hover:bg-gray-50 cursor-pointer">
+              <Accordion.Trigger className="group flex w-full items-center justify-between px-6 py-5 text-base sm:text-lg font-medium font-space-grotesk text-gray-900 text-left transition-colors hover:bg-gray-50 cursor-pointer">
+                <span className="pr-6">
                 {faq.question}
+                </span>
                 <ChevronDownIcon
-                  className="transition-transform duration-300 group-data-[state=open]:rotate-180 h-5 w-5 text-gray-500"
+                  className="transition-transform duration-300 group-data-[state=open]:rotate-180 h-5 w-5 text-gray-500 shrink-0"
                   aria-hidden="true"
                 />
               </Accordion.Trigger>

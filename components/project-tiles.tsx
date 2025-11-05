@@ -1,3 +1,6 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
 import { Project, showcaseProject } from "@/data/projects/showcase";
 import OptimizedImage from "./images/optimized-image-component";
 import { Button } from "./ui/button";
@@ -14,17 +17,33 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import MobileHero from "./mobile-hero";
+import Link from "next/link";
+import { FilterTab } from "./filter-tab";
+import AnimatedTabsWithContent from "./sliding-tab";
+import { useMemo } from "react";
 
 const ProjectTile = () => {
+  const searchParams = useSearchParams();
+  const selectedTab = searchParams.get("tab") || "all";
+
+  const filteredProjects = useMemo(() => {
+    return selectedTab === "all"
+      ? showcaseProject
+      : showcaseProject.filter((project) => project.tags.includes(selectedTab));
+  }, [selectedTab]);
+
+  console.log("Selected tab:", selectedTab);
+  showcaseProject.forEach((p) => {
+    console.log(p.name, p.tags);
+  });
+  console.log("Filtered projects:", filteredProjects);
+
   return (
     <div className="relative w-full flex flex-col px-5">
       <div className="hidden sticky top-0 z-10 bg-[#FCFCFC] w-full h-16 sm:flex justify-between items-center">
         <h2>My Works</h2>
-        <div>
-          <Button variant="secondary" className="w-2xs">
-            All
-          </Button>
-        </div>
+        <FilterTab />
+        {/* <AnimatedTabsWithContent /> */}
       </div>
       <MobileHero />
 
@@ -41,8 +60,16 @@ const ProjectTile = () => {
       {/* <span className="w-full h-16"></span> */}
 
       <div className="w-full grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 gap-5">
-        {showcaseProject.map((project, index) => {
-          return <SingleCell key={index} project={project} />;
+        {filteredProjects.map((project) => {
+          // return <SingleCell key={index} project={project} />;
+          return (
+            <Link key={project.thumbnail} href="" className="w-full">
+              <CellPreview
+                name={project.name}
+                href={project.thumbnail}
+              />
+            </Link>
+          );
         })}
       </div>
     </div>
@@ -88,7 +115,9 @@ const SingleCell = ({ project }: { project: Project }) => {
           </div>
           <DrawerHeader>
             <DrawerTitle>{project.name}</DrawerTitle>
-            <DrawerDescription className="sr-only">This action cannot be undone.</DrawerDescription>
+            <DrawerDescription className="sr-only">
+              This action cannot be undone.
+            </DrawerDescription>
           </DrawerHeader>
           <div className="w-full h-full pb-20 flex flex-col">
             <OptimizedImage

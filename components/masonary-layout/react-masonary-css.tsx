@@ -24,13 +24,13 @@ export function ReactMasonryCss({ images }: PinterestMasonryProps) {
   return (
     <Masonry
       breakpointCols={breakpointColumnsObj}
-      className="flex w-full gap-4"
+      className="flex w-full gap-2"
       columnClassName="masonry-column"
     >
       {images.map((image) => (
         <div
           key={image.name}
-          className="mb-4 rounded-lg bg-gray-200 overflow-hidden group"
+          className="rounded-sm bg-gray-200 overflow-hidden group"
         >
           <Image
             src={image.src}

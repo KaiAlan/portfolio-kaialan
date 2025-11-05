@@ -9,6 +9,7 @@ import {
   PersonIcon,
   TimerIcon,
 } from "@radix-ui/react-icons";
+import Link from "next/link";
 import React from "react";
 
 type ServiceType = {
@@ -30,7 +31,7 @@ const services: ServiceType[] = [
       "Design Systems & Handoff",
     ],
     ctaLink: "",
-    recentProjectLink: "",
+    recentProjectLink: "/?tab=web",
     preview: "/images/services/web.png",
   },
   {
@@ -43,7 +44,7 @@ const services: ServiceType[] = [
       "Consultation & Iterative Design",
     ],
     ctaLink: "",
-    recentProjectLink: "",
+    recentProjectLink: "/?tab=branding",
     preview: "/images/services/brand.png",
   },
   {
@@ -56,7 +57,7 @@ const services: ServiceType[] = [
       "SEO & performance optimization",
     ],
     ctaLink: "",
-    recentProjectLink: "",
+    recentProjectLink: "/?tab=framer",
     preview: "/images/services/framer.png",
   },
 ];
@@ -70,14 +71,14 @@ const Services = () => {
           I love designing.
         </p>
       </div>
-      <div className="w-full px-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
+      <div className="max-w-[1800px] w-full mx-auto px-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 lg:gap-6 xl:gap-8 2xl:gap-10">
         {services.map((service, index) => (
           <ServiceCard key={index} service={service} />
         ))}
         <RefferCard />
       </div>
 
-      <div className="w-full px-5 flex flex-col lg:flex-row justify-start items-start gap-8 my-32">
+      <div className="max-w-[1800px] w-full mx-auto px-5 flex flex-col lg:flex-row justify-start items-start gap-20 sm:gap-8 my-32">
         <div className="w-full">
           <PricingSection />
         </div>
@@ -129,12 +130,14 @@ const ServiceCard = ({ service }: { service: ServiceType }) => {
             <Button className="w-full h-10 text-white font-semibold bg-black p-3 cursor-pointer">
               Get a quote
             </Button>
+            <Link href={service.recentProjectLink} className="w-full">
             <Button
               variant="ghost"
               className="w-full h-10 text-gray-400 font-medium p-3 cursor-pointer"
             >
               See recent projects
             </Button>
+            </Link>
           </div>
         </div>
       </div>

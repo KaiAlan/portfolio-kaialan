@@ -1,6 +1,6 @@
 "use client";
 
-import { cloneElement, useRef, useState } from "react";
+import { cloneElement, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -198,7 +198,15 @@ const SocialButtons = () => {
 // };
 
 const HireMeCard = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 5000); // 6.5 seconds delay
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
 
   return (
     <div className="w-full flex justify-end absolute bottom-[calc(100%+8px)] right-0 z-10">

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { RainbowButton } from "./ui/rainbow-button";
 
 type PricingModel = {
   title: string;
@@ -37,7 +38,10 @@ export default function PricingSection() {
         Worried about Pricing?
       </h2>
       <p className="mb-10 text-gray-600 text-xs">
-        Pricing is typically project-based with clear deliverables. For ongoing work, hourly and retainer models are available. Every project gets a personalized quote, just share your goals and budget for tailored suggestions.
+        Pricing is typically project-based with clear deliverables. For ongoing
+        work, hourly and retainer models are available. Every project gets a
+        personalized quote, just share your goals and budget for tailored
+        suggestions.
       </p>
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
         {pricingModels.map((model, idx) => (
@@ -45,21 +49,22 @@ export default function PricingSection() {
             key={model.title}
             className="rounded-lg border border-gray-200 bg-white shadow-sm p-6 flex flex-col gap-3 hover:shadow-lg transition-shadow"
           >
-            <h3 className="text-lg font-space-grotesk font-semibold text-gray-900">{model.title}</h3>
-            <p className="text-xs text-gray-600 leading-relaxed">{model.description}</p>
+            <h3 className="text-lg font-space-grotesk font-semibold text-gray-900">
+              {model.title}
+            </h3>
+            <p className="text-xs text-gray-600 leading-relaxed">
+              {model.description}
+            </p>
           </div>
         ))}
       </div>
-      <div className="mt-12 flex flex-col items-center">
-        <span className="text-base text-gray-700 mb-3">
+      <div className="mt-12 flex flex-col items-center gap-2">
+        <span className="text-base text-center text-gray-700 mb-3">
           Need something custom? Every project gets a personalized estimate.
         </span>
-        <a
-          href="#contact"
-          className="inline-block px-6 py-3 font-medium bg-black text-white rounded-xl hover:bg-gray-900 transition-colors"
-        >
+        <RainbowButton variant="default" className="h-12 rounded-lg flex justify-center items-center font-medium">
           Get a custom quote
-        </a>
+        </RainbowButton>
       </div>
     </section>
   );
