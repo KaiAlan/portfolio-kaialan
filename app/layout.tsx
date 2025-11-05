@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Roboto_Mono, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Sidebar from "@/components/navbar/sidebar";
 import Topbar from "@/components/navbar/topbar";
 import MobileMenuBar from "@/components/navbar/mobile-menu";
@@ -8,20 +9,20 @@ import MobileMenuBar from "@/components/navbar/mobile-menu";
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
   subsets: ["latin"],
-  display: 'swap'
-})
+  display: "swap",
+});
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ['latin'],
-  display: 'swap'
-})
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
-  subsets: ['latin'],
-  display: 'swap'
-})
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -40,7 +41,16 @@ export const metadata: Metadata = {
   },
   description:
     "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
-  keywords: ["ui", "ux", "ui/ux designer", "brand desgin", "web design", "mobile desgin", "designer", "portfolio"],
+  keywords: [
+    "ui",
+    "ux",
+    "ui/ux designer",
+    "brand desgin",
+    "web design",
+    "mobile desgin",
+    "designer",
+    "portfolio",
+  ],
   authors: [{ name: "Kaialan Razz", url: `${siteUrl}` }],
   creator: "Kaialan Razz",
   publisher: "Kaialan Razz",
@@ -108,10 +118,11 @@ export default function RootLayout({
           <Sidebar />
           <main className="w-full flex flex-col justify-start items-start gap-0">
             <Topbar />
-          {children}
+            {children}
           </main>
           <MobileMenuBar />
         </section>
+        <SpeedInsights />
       </body>
     </html>
   );
