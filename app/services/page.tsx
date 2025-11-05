@@ -1,6 +1,7 @@
 import FaqAccordion from "@/components/faq";
 import OptimizedImage from "@/components/images/optimized-image-component";
 import PricingSection from "@/components/pricing";
+import { SharePortfolio } from "@/components/share-portfolio-button";
 import { Button } from "@/components/ui/button";
 import {
   ChatBubbleIcon,
@@ -30,7 +31,7 @@ const services: ServiceType[] = [
       "Usability Audits & Redesigns",
       "Design Systems & Handoff",
     ],
-    ctaLink: "",
+    ctaLink: "https://cal.com/kaialan/intro?required-services=Website",
     recentProjectLink: "/?tab=web",
     preview: "/images/services/web.png",
   },
@@ -43,7 +44,7 @@ const services: ServiceType[] = [
       "Social/Digital Brand Assets",
       "Consultation & Iterative Design",
     ],
-    ctaLink: "",
+    ctaLink: "https://cal.com/kaialan/intro?required-services=Branding",
     recentProjectLink: "/?tab=branding",
     preview: "/images/services/brand.png",
   },
@@ -56,7 +57,7 @@ const services: ServiceType[] = [
       "Animations, interactive elements",
       "SEO & performance optimization",
     ],
-    ctaLink: "",
+    ctaLink: "https://cal.com/kaialan/intro?required-services=Framer Development",
     recentProjectLink: "/?tab=framer",
     preview: "/images/services/framer.png",
   },
@@ -127,9 +128,11 @@ const ServiceCard = ({ service }: { service: ServiceType }) => {
             </ul>
           </div>
           <div className="w-full flex flex-col gap-0">
-            <Button className="w-full h-10 text-white font-semibold bg-black p-3 cursor-pointer">
-              Get a quote
-            </Button>
+            <Link href={service.ctaLink} className="w-full">
+              <Button className="w-full h-10 text-white font-semibold bg-black p-3 cursor-pointer">
+                Get a quote
+              </Button>
+            </Link>
             <Link href={service.recentProjectLink} className="w-full">
             <Button
               variant="ghost"
@@ -212,12 +215,13 @@ const RefferCard = () => {
             {/* <Button className="w-full h-10 text-white font-semibold bg-black p-3 cursor-pointer">
               Share this portfolio
             </Button> */}
-            <Button
+            {/* <Button
               variant="secondary"
               className="w-full h-10 font-medium p-3 cursor-pointer"
             >
               Share this portfolio
-            </Button>
+            </Button> */}
+            <SharePortfolio variant='secondary' className="w-full h-10 font-medium p-3 cursor-pointer">Share this portfolio</SharePortfolio>
           </div>
         </div>
       </div>

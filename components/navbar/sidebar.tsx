@@ -139,7 +139,7 @@ export default Sidebar;
 
 const SocialButtons = () => {
   const [copied, setCopied] = useState(false);
-  const email = "dev.kaialan@gmail.com";
+  const email = "kaialanrazz@gmail.com";
 
   const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault(); // prevent mailto from opening
@@ -151,7 +151,7 @@ const SocialButtons = () => {
   return (
     <div className="w-full flex flex-col gap-1">
       <Link
-        href="www.linkedin.com/in/kaialan"
+        href="https://linkedin.com/in/kaialan"
         className={cn(
           "group w-full h-full flex justify-start rounded-[11px] cursor-pointer p-1 gap-2 hover:bg-[#f1f1f1] hover:border-[0.5px] hover:border-[#EAEAEA]"
         )}
@@ -247,9 +247,11 @@ const HireMeCard = () => {
           Crafting ever lasting Experiences & Identities{" "}
         </p>
       </div>
-      <Button className="w-full bg-white text-black hover:bg-black hover:text-white font-semibold transition-all cursor-pointer">
-        Book a Call
-      </Button>
+      <Link href='https://cal.com/kaialan/intro' className="w-full">
+        <Button className="w-full bg-white text-black hover:bg-black hover:text-white font-semibold transition-all cursor-pointer">
+          Book a Call
+        </Button>
+      </Link>
     </div>
   );
 };

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { RainbowButton } from "./ui/rainbow-button";
+import Link from "next/link";
 
 type PricingModel = {
   title: string;
@@ -37,7 +38,7 @@ export default function PricingSection() {
       <h2 className="text-3xl md:text-4xl font-space-grotesk font-semibold mb-3 text-gray-900">
         Worried about Pricing?
       </h2>
-      <p className="mb-10 text-gray-600 text-xs">
+      <p className="mb-10 text-gray-600 text-base">
         Pricing is typically project-based with clear deliverables. For ongoing
         work, hourly and retainer models are available. Every project gets a
         personalized quote, just share your goals and budget for tailored
@@ -52,7 +53,7 @@ export default function PricingSection() {
             <h3 className="text-lg font-space-grotesk font-semibold text-gray-900">
               {model.title}
             </h3>
-            <p className="text-xs text-gray-600 leading-relaxed">
+            <p className="text-base text-gray-600 leading-relaxed">
               {model.description}
             </p>
           </div>
@@ -62,9 +63,11 @@ export default function PricingSection() {
         <span className="text-base text-center text-gray-700 mb-3">
           Need something custom? Every project gets a personalized estimate.
         </span>
-        <RainbowButton variant="default" className="h-12 rounded-lg flex justify-center items-center font-medium">
-          Get a custom quote
-        </RainbowButton>
+        <Link href='https://forms.gle/tR1a6JhWsxvVhE1t7' className="">
+          <RainbowButton variant="default" className="h-12 rounded-lg flex justify-center items-center font-medium">
+            Get a custom quote
+          </RainbowButton>
+        </Link>
       </div>
     </section>
   );

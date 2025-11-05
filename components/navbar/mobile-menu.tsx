@@ -15,6 +15,8 @@ import ContainerIcon from "@/assets/svg/container";
 import FaceWinkIcon from "@/assets/svg/face-wink";
 import GridIcon from "@/assets/svg/grid";
 import GoogleMeetIcon from "@/assets/svg/gmeet";
+import { SharePortfolio } from "../share-portfolio-button";
+import { ShareIcon } from "@/assets/svg/share";
 
 const navLinks = [
   {
@@ -123,14 +125,22 @@ const MobileMenuBar = () => {
             <Link
               href="mailto:kaialanrazz@gmail.com"
               target="_blank"
-              className="flex items-center gap-2 py-2 text-base font-medium hover:bg-gray-50 rounded"
+              className="flex items-center gap-2 text-base font-medium hover:bg-gray-50 rounded"
             >
               <GmailColoredIcon width={20} height={20} className="p-px" />
-              Gmail
+              <span className="w-full flex flex-col gap-1 py-2 border-b border-gray-200">
+                Email
+              </span>
+            </Link>
+            <Link
+              href=""
+              className="flex items-center gap-2 text-base font-medium hover:bg-gray-50 rounded"
+            >
+              <ShareIcon width={20} height={20} className="p-px" />
+              <SharePortfolio className="border-none flex justify-start items-center shadow-none hover:bg-transparent text-base font-medium py-2 px-0 h-full">Share</SharePortfolio>
             </Link>
           </div>
         )}
-
         <HireMeCard />
       </div>
     </nav>
@@ -200,7 +210,7 @@ const SocialButtons = () => {
 const HireMeCard = () => {
   const [open, setOpen] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
     const timer = setTimeout(() => {
       setOpen(true);
     }, 5000); // 6.5 seconds delay
@@ -255,9 +265,11 @@ const HireMeCard = () => {
                 Crafting ever lasting Experiences & Identities
               </p>
             </div>
-            <Button className="w-full h-9 bg-black text-white hover:bg-white hover:text-black font-semibold transition-all cursor-pointer rounded-2xl">
-              Book a Call
-            </Button>
+            <Link href="https://cal.com/kaialan/intro" className="w-full">
+              <Button className="w-full h-9 bg-black text-white hover:bg-white hover:text-black font-semibold transition-all cursor-pointer rounded-2xl">
+                Book a Call
+              </Button>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
