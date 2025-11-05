@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Roboto_Mono, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import Sidebar from "@/components/navbar/sidebar";
 import Topbar from "@/components/navbar/topbar";
 import MobileMenuBar from "@/components/navbar/mobile-menu";
@@ -123,6 +124,7 @@ export default function RootLayout({
           <MobileMenuBar />
         </section>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
