@@ -7,40 +7,40 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import {
   CheckCircledIcon,
-  CubeIcon,
-  DashboardIcon,
   EnvelopeClosedIcon,
-  FaceIcon,
   LinkedInLogoIcon,
-  TransformIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 import { Button } from "../ui/button";
+import SkewIcon from "@/assets/svg/skew";
+import ContainerIcon from "@/assets/svg/container";
+import FaceWinkIcon from "@/assets/svg/face-wink";
+import GridIcon from "@/assets/svg/grid";
 
 const navLinks = [
   {
     href: ["/", "/all", "/ui-ux", "/graphics", "/branding"],
     label: "My Works",
-    icon: <CubeIcon />,
-    color: "rose-500",
+    icon: <ContainerIcon />,
+    color: "#ff637e",
   },
   {
     href: ["/gallery"],
     label: "Gallery",
-    icon: <DashboardIcon />,
-    color: "blue-500",
+    icon: <GridIcon />,
+    color: "#2b7fff",
   },
   {
     href: ["/about-me"],
     label: "About Me",
-    icon: <FaceIcon />,
-    color: "yellow-500",
+    icon: <FaceWinkIcon />,
+    color: "#f0b100",
   },
   {
     href: ["/services"],
     label: "Services",
-    icon: <TransformIcon />,
-    color: "teal-500",
+    icon: <SkewIcon />,
+    color: "#00bba7",
   },
 ];
 
@@ -97,16 +97,16 @@ const Sidebar = () => {
                         : ""
                     )}
                   >
-                    <span
-                      className={cn(
-                        `group-hover:text-${item.color}`,
-                        item.href.includes(pathname)
-                          ? `text-${item.color}`
-                          : "text-gray-400"
-                      )}
-                    >
-                      {cloneElement(item.icon)}
-                    </span>
+                    {cloneElement(item.icon, {
+                      width: 16,
+                      height: 16,
+                      stroke: item.href.includes(pathname)
+                        ? "#000000"
+                        : "#808080",
+                      strokeWidth: 1,
+                      fill: item.href.includes(pathname) ? item.color : "none",
+                      className: `group-hover:text-[${item.color}]`,
+                    })}
                   </div>
                   <div className="w-full h-full flex justify-start items-center">
                     <span

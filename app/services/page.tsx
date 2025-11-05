@@ -63,21 +63,21 @@ const services: ServiceType[] = [
 
 const Services = () => {
   return (
-    <section className="w-full flex flex-col px-5 mx-auto">
-      <div className="sticky top-0 z-100 w-full flex flex-col md:flex-row justify-between items-start gap-2 py-5 bg-[#FCFCFC]">
+    <section className="w-full flex flex-col mx-auto">
+      <div className="sticky top-0 z-100 w-full flex flex-col md:flex-row justify-between items-start gap-2 px-5 py-5 bg-[#FCFCFC]">
         <h1 className="text font-semibold">My Services</h1>
         <p className="max-w-xl text-wrap md:text-right text-sm text-[#929292]">
           I love designing.
         </p>
       </div>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
+      <div className="w-full px-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
         {services.map((service, index) => (
           <ServiceCard key={index} service={service} />
         ))}
         <RefferCard />
       </div>
 
-      <div className="w-full flex flex-col lg:flex-row justify-start items-start gap-8 my-32">
+      <div className="w-full px-5 flex flex-col lg:flex-row justify-start items-start gap-8 my-32">
         <div className="w-full">
           <PricingSection />
         </div>
@@ -104,7 +104,6 @@ const ServiceCard = ({ service }: { service: ServiceType }) => {
             background:
               "linear-gradient(to top, rgba(255,255,255,1) 60%, rgba(255,255,255,0.25) 80%, rgba(255,255,255,0) 100%)",
             filter: "blur(5px)",
-            zIndex: 10,
           }}
         />
       </div>
@@ -171,7 +170,6 @@ const RefferCard = () => {
             background:
               "linear-gradient(to top, rgba(255,255,255,1) 60%, rgba(255,255,255,0.25) 80%, rgba(255,255,255,0) 100%)",
             filter: "blur(5px)",
-            zIndex: 10,
           }}
         />
       </div>

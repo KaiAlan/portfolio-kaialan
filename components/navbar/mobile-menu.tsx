@@ -48,15 +48,15 @@ const MobileMenuBar = () => {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef(null);
 
-  const [copied, setCopied] = useState(false);
-  const email = "dev.kaialan@gmail.com";
+  // const [copied, setCopied] = useState(false);
+  // const email = "dev.kaialan@gmail.com";
 
-  const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault(); // prevent mailto from opening
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // hide after 2 seconds
-  };
+  // const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault(); // prevent mailto from opening
+  //   navigator.clipboard.writeText(email);
+  //   setCopied(true);
+  //   setTimeout(() => setCopied(false), 2000); // hide after 2 seconds
+  // };
 
   return (
     <nav className="sticky bottom-0 left-0 sm:hidden w-full h-20 px-5 py-4 bg-white shadow">
@@ -201,7 +201,7 @@ const HireMeCard = () => {
   const [open, setOpen] = useState(true);
 
   return (
-    <div className="w-full flex justify-end absolute bottom-[calc(100%+8px)] right-0 z-50">
+    <div className="w-full flex justify-end absolute bottom-[calc(100%+8px)] right-0 z-10">
       <AnimatePresence>
         {open && (
           <motion.div
@@ -263,9 +263,9 @@ const HireMeCard = () => {
       >
         <Button
           onClick={() => setOpen(true)}
-          className="w-16 h-16 rounded-full mb-5 p-2 flex items-center justify-center cursor-pointer"
+          className="w-12 h-12 rounded-full mb-5 p-2 flex items-center justify-center cursor-pointer"
         >
-          <GoogleMeetIcon style={{ width: 32, height: 32 }} />
+          <GoogleMeetIcon style={{ width: 16, height: 16 }} />
         </Button>
       </motion.div>
     </div>
