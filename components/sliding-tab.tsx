@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
@@ -8,14 +8,13 @@ import React, { useRef, useLayoutEffect, useState } from "react";
 type Tab = {
   label: string;
   value: string;
-  content?: React.ReactNode;
 };
 
 const tabItems: Tab[] = [
-  { label: "All", value: "all", content: <div>All Content</div> },
-  { label: "UI/UX", value: "uiux", content: <div>UI/UX Content</div> },
-  { label: "Graphics", value: "graphics", content: <div>Graphics Content</div> },
-  { label: "Branding", value: "branding", content: <div>Branding Content</div> },
+  { label: "All", value: "all" },
+  { label: "UI/UX", value: "uiux" },
+  { label: "Graphics", value: "graphics" },
+  { label: "Branding", value: "branding" },
 ];
 
 export default function AnimatedTabsWithContent() {
@@ -64,7 +63,7 @@ export default function AnimatedTabsWithContent() {
           className="relative h-11 flex bg-[#F1F1F1] border-[#eaeaea] rounded-[11px] p-2 gap-0 perspective-[1000px]"
         >
           <motion.div
-            className="absolute top-2 bottom-2 bg-white rounded-[5px] shadow"
+            className="absolute top-2 bottom-2 bg-white rounded-[5px] shadow-none"
             layout
             transition={{ type: "spring", stiffness: 400, damping: 30 }}
             style={{
@@ -79,13 +78,15 @@ export default function AnimatedTabsWithContent() {
               ref={(el) => {
                 refs.current[idx] = el;
               }}
-              className="w-full px-3 py-1.5 rounded-[5px] text-xs font-semibold text-neutral-500 cursor-pointer relative z-10 select-none"
+              className="w-full px-3 py-1.5 rounded-[5px] text-xs font-semibold text-neutral-500 cursor-pointer relative z-10 select-none shadow-none"
               style={{
-                transformStyle: 'preserve-3d'
+                transformStyle: "preserve-3d",
               }}
             >
               <motion.span
-                layoutId={currentTab === item.value ? "clickedbutton" : undefined}
+                layoutId={
+                  currentTab === item.value ? "clickedbutton" : undefined
+                }
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={`relative block ${
                   currentTab === item.value ? "text-black" : "text-neutral-500"

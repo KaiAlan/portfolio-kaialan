@@ -32,18 +32,18 @@ const ProjectTile = () => {
       : showcaseProject.filter((project) => project.tags.includes(selectedTab));
   }, [selectedTab]);
 
-  console.log("Selected tab:", selectedTab);
-  showcaseProject.forEach((p) => {
-    console.log(p.name, p.tags);
-  });
-  console.log("Filtered projects:", filteredProjects);
+  // console.log("Selected tab:", selectedTab);
+  // showcaseProject.forEach((p) => {
+  //   console.log(p.name, p.tags);
+  // });
+  // console.log("Filtered projects:", filteredProjects);
 
   return (
     <div className="relative w-full flex flex-col px-5">
       <div className="hidden sticky top-0 z-10 bg-[#FCFCFC] w-full h-16 sm:flex justify-between items-center">
         <h2>My Works</h2>
-        <FilterTab />
-        {/* <AnimatedTabsWithContent /> */}
+        {/* <FilterTab /> */}
+        <AnimatedTabsWithContent />
       </div>
       <MobileHero />
 
