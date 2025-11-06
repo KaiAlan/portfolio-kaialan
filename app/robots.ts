@@ -1,4 +1,4 @@
-const siteUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? 'http://localhost:3000'
+const siteUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? 'https://kaialan.vercel.app'
 
 export default function robots() {
   return {

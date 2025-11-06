@@ -1,3 +1,5 @@
+
+
 export type Project = {
   name: string;
   pageLink: string;
@@ -5,10 +7,21 @@ export type Project = {
   thumbnail: string;
   width: number;
   height: number;
+  lottieData?: object;
+  lottieUrl?: string;
 }
 
 
 export const showcaseProject: Project[] = [
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+  },
   {
     name: "XP-Pen M500",
     pageLink: "",
@@ -80,5 +93,110 @@ export const showcaseProject: Project[] = [
     thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4IPyGSuqOA0cdpDX7ZjwKq/c417b599218f2ec5a7ac27360a407956/h4b-s4.png",
     width: 3,
     height: 2
+  },
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+  },
+  {
+    name: "XP-Pen M500",
+    pageLink: "",
+    tags: ["graphics"],
+    thumbnail: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejVpN2VxdWxwcjN0MGxtaWt1eTFnNDRsZm5jM2x1aW9kdmhucDFtdCZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/lqPZLGWcXJHS21kubp/giphy.gif",
+    width: 3,
+    height: 2
+  },
+  {
+    name: "XP-Pen M500",
+    pageLink: "",
+    tags: ["graphics", "branding"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/1sRLXuoTkdMhuZgt8REB9N/ff76af7bc58ba979684f938634a8f4c0/h4b-s4-graphics-thumbnail.png",
+    width: 3,
+    height: 2
+  },
+  {
+    name: "XP-Pen M500",
+    pageLink: "",
+    tags: ["graphics"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/7ewLyRnP37eLmxQWqeX7HE/8f68ede76e497a4e9741a0f2b0f46f2d/Pixel-Cherry.png",
+    width: 3,
+    height: 2
+  },
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+  },
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+  },
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+  },
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+  },
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+  },
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+  },
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+  },
+  {
+    name: "Portfolio",
+    pageLink: "",
+    tags: ["web", "uiux"],
+    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    width: 3,
+    height: 2,
+    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
   },
 ]

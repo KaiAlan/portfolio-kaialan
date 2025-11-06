@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import StructuredData from "@/components/StructuredData";
 import ProjectTile from "@/components/project-tiles";
+import { showcaseProject } from "@/data/projects/showcase";
 
-const siteUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "https://kaialan.vercel.app";
 
 export const metadata: Metadata = {
   title: "Kaialan Razz",
@@ -30,7 +31,30 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
+async function fetchProjectsWithLottie() {
+
+  const projectsWithAnimation = await Promise.all(
+    showcaseProject.map(async (project) => {
+      if (project.lottieUrl) {
+        const res = await fetch(project.lottieUrl);
+        if (res.ok) {
+          const lottieData = await res.json();
+          return { ...project, lottieData };
+        }
+      }
+      return project;
+    })
+  );
+
+  return projectsWithAnimation;
+}
+
+
+export default async function HomePage() {
+
+   const projects = await fetchProjectsWithLottie();
+
+
   return (
     <>
       <StructuredData
@@ -40,7 +64,7 @@ export default function HomePage() {
           "@type": "WebPage",
           name: "Kaialan Razz",
           description:
-            "Explore my projects in web development, UI/UX design and creative coding",
+            "Explore my projects in UI/UX, Web, Mobile and Brand design",
           url: `${siteUrl}`,
           author: {
             "@type": "Person",
@@ -49,7 +73,7 @@ export default function HomePage() {
         }}
       />
       <section className="w-full text-[12px]">
-        <ProjectTile />
+        <ProjectTile projects={projects} />
       </section>
     </>
   );
