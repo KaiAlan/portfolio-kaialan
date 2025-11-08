@@ -26,7 +26,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ projects }) => {
       : projects.filter((project) => project.tags.includes(selectedTab));
   }, [selectedTab, projects]);
 
-  console.log(filteredProjects);
+  // console.log(filteredProjects);
 
   return (
     <div className="relative w-full min-h-svh sm:min-h-full flex flex-col px-5">
