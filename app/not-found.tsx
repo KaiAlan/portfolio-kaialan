@@ -1,23 +1,24 @@
+import { MorphingText } from '@/components/ui/morphing-text';
+import { RainbowButton } from '@/components/ui/rainbow-button';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <main className="w-full flex flex-col items-center justify-center min-h-screen px-4 py-16 text-center">
-      <h1 className="text-6xl font-bold text-gray-900 dark:text-gray-100">404</h1>
-      <h2 className="mt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">Page Not Found</h2>
-      <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-md">
-        The page you are looking for does not exist or has been moved.
-      </p>
-      <div className="mt-8">
-        <Link
-          href="/"
-          className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Return Home
+    <div className="w-full min-h-svh sm:min-h-[calc(100%-64px)] flex flex-col items-center justify-center px-5 m-auto">
+      <div className="flex flex-col items-center w-full">
+        <MorphingText
+          className="max-w-full w-full text-4xl mb-4 lg:mb-8"
+          texts={["Page Not Found", "404"]}
+        />
+        <p className="text-xs lg:text-base text-gray-500 mb-6 text-center">
+          The page you are looking for does not exist or may have been moved.
+        </p>
+        <Link href="/">
+          <RainbowButton className="h-12 flex justify-center items-center text-base font-space-grotesk px-8">
+            Back to works
+          </RainbowButton>
         </Link>
       </div>
-    </main>
+    </div>
   );
 }

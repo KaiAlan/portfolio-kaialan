@@ -66,7 +66,7 @@ const services: ServiceType[] = [
 const Services = () => {
   return (
     <section className="w-full flex flex-col mx-auto">
-      <div className="sticky top-0 z-100 w-full flex flex-col md:flex-row justify-between items-start gap-2 px-5 py-5 bg-[#FCFCFC]">
+      <div className="sticky top-16 z-100 w-full flex flex-col md:flex-row justify-between items-start gap-2 px-5 py-5 bg-[#FCFCFC]">
         <h1 className="text font-semibold">My Services</h1>
         <p className="max-w-xl text-wrap md:text-right text-sm text-[#929292]">
           I love designing.

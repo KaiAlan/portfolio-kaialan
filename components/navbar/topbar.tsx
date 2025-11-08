@@ -64,7 +64,7 @@ const Topbar = () => {
   };
 
   return (
-    <div className="sticky top-0 sm:relative w-full h-16 flex justify-between items-center px-5 z-20 bg-[#FCFCFC] border-b border-b-[#EBEBEB]">
+    <div className="sticky top-0 w-full h-16 flex justify-between items-center px-5 z-20 bg-[#FCFCFC] border-b border-b-[#EBEBEB]">
       <div className="hidden sm:flex justify-center items-center gap-2">
         <Button
           variant="secondary"

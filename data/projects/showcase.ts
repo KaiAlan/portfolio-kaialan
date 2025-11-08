@@ -9,194 +9,63 @@ export type Project = {
   height: number;
   lottieData?: object;
   lottieUrl?: string;
+  videoUrl?: string;
 }
 
 
 export const showcaseProject: Project[] = [
   {
-    name: "Portfolio",
-    pageLink: "",
+    name: "Axtionable",
+    pageLink: "axtionable",
     tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    thumbnail: "",
     width: 3,
     height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+    videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/442wdeq286sRjBvzBXstV/1e993105743004546ea28f4142d9d7d2/axtionable_preview.webm'
   },
   {
-    name: "XP-Pen M500",
-    pageLink: "",
+    name: "Ax for employers",
+    pageLink: "ax-for-employers",
     tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4hBCJLJPHlYPFwRKnX5cBr/392a5ebf49172181a33758d2a98efd1a/h4b-s3.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["web", "mobile", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/6F2Fs3xL3wSGVR7DbEyMwr/baadd87e04843f4349f15e82fa501b94/axtionable.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["graphics", "branding"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/yAJDKCtgA4gAdx8wiU5do/421cea49988eb71ccf3d14108576ecfb/ganga-bathings-catalogue.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["graphics"],
-    thumbnail: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejVpN2VxdWxwcjN0MGxtaWt1eTFnNDRsZm5jM2x1aW9kdmhucDFtdCZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/lqPZLGWcXJHS21kubp/giphy.gif",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["graphics", "branding"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/1sRLXuoTkdMhuZgt8REB9N/ff76af7bc58ba979684f938634a8f4c0/h4b-s4-graphics-thumbnail.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["graphics"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/7ewLyRnP37eLmxQWqeX7HE/8f68ede76e497a4e9741a0f2b0f46f2d/Pixel-Cherry.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["graphics"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/6RFc58JgQzx3dIpjbF0pIs/4f36329e97b7ea0015d417e162d24f34/retro_game_console.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["web", "mobile", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/79bVlYaTQfaS8K98cj3i9p/2f504b66a3aac8070d5d301381bcce17/sparkit-homepage.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["web", "mobile", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4IPyGSuqOA0cdpDX7ZjwKq/c417b599218f2ec5a7ac27360a407956/h4b-s4.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "Portfolio",
-    pageLink: "",
-    tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    thumbnail: "",
     width: 3,
     height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+    videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/7Ag9Y04MBH1y0GQepQLbEZ/ed51af66c39169757d12e869ef57c86f/ax_for_employers_preview.webm'
   },
   {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["graphics"],
-    thumbnail: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejVpN2VxdWxwcjN0MGxtaWt1eTFnNDRsZm5jM2x1aW9kdmhucDFtdCZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/lqPZLGWcXJHS21kubp/giphy.gif",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["graphics", "branding"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/1sRLXuoTkdMhuZgt8REB9N/ff76af7bc58ba979684f938634a8f4c0/h4b-s4-graphics-thumbnail.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "XP-Pen M500",
-    pageLink: "",
-    tags: ["graphics"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/7ewLyRnP37eLmxQWqeX7HE/8f68ede76e497a4e9741a0f2b0f46f2d/Pixel-Cherry.png",
-    width: 3,
-    height: 2
-  },
-  {
-    name: "Portfolio",
-    pageLink: "",
+    name: "Portfolio Alex",
+    pageLink: "portfolio-alex",
     tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    thumbnail: "",
     width: 3,
     height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+    videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/2j7Eqwtw9PZ9tOufl8UJ3M/d42e898bdedddba5cc8ed96480286718/portfolio_nikhil_preview.webm'
   },
   {
-    name: "Portfolio",
-    pageLink: "",
+    name: "Portfolio Sharon Lara",
+    pageLink: "portfolio-sharon-lara",
     tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    thumbnail: "",
     width: 3,
     height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+    videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/3VD8JoxtHbQ2Y6lPcYPmT4/95926db5327f01e82b2143c3f6ba38a2/portfolio_sharon_lara_preview.webm'
   },
   {
-    name: "Portfolio",
-    pageLink: "",
+    name: "Weather Card Widgets",
+    pageLink: "weather-card-widgets",
     tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    thumbnail: "",
     width: 3,
     height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+    videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/3vUaCMl39fMtnLjv8VJK3E/dfc2d968e602cb316e597564c5dd2c54/weather_card_preview.webm'
   },
   {
-    name: "Portfolio",
-    pageLink: "",
+    name: "Liquid glass Song player",
+    pageLink: "liquid-glass-song-player",
     tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
+    thumbnail: "",
     width: 3,
     height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
-  },
-  {
-    name: "Portfolio",
-    pageLink: "",
-    tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
-    width: 3,
-    height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
-  },
-  {
-    name: "Portfolio",
-    pageLink: "",
-    tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
-    width: 3,
-    height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
-  },
-  {
-    name: "Portfolio",
-    pageLink: "",
-    tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
-    width: 3,
-    height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
-  },
-  {
-    name: "Portfolio",
-    pageLink: "",
-    tags: ["web", "uiux"],
-    thumbnail: "https://images.ctfassets.net/xsgwjwcuxltx/4X7weCjGtXfL5l78abAqRG/81a97cdfc393782ea8f87601e0a15a3b/Scene-13-ezgif.com-optimize.gif",
-    width: 3,
-    height: 2,
-    lottieUrl: 'https://assets.ctfassets.net/xsgwjwcuxltx/4QUCBn0kDnITxPVgA9QKJS/5968369c3b0a1813d6f808464a94dabc/lottie-thumbnail-1.json',
+    videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/2dIIAG8DwMazVYR6EXok14/dae75ea8590ec6434487c7a2d27176c5/liquid_glass_ui_preview.webm'
   },
 ]

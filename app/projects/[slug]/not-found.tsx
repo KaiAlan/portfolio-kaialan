@@ -1,28 +1,24 @@
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import Link from "next/link";
+import { MorphingText } from "@/components/ui/morphing-text";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export default function ProjectNotFound() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen px-4 py-16 text-center">
-      <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">Project Not Found</h1>
-      <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-md">
-        The project you are looking for does not exist or may have been moved.
-      </p>
-      <div className="mt-8 flex flex-col sm:flex-row gap-4">
-        <Link
-          href="/projects"
-          className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          All Projects
-        </Link>
-        <Link
-          href="/"
-          className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50 dark:text-white dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors"
-        >
-          Return Home
+    <div className="w-full min-h-svh sm:min-h-[calc(100%-64px)] flex flex-col items-center justify-center px-5 m-auto">
+      <div className="flex flex-col items-center w-full">
+        <MorphingText
+          className="max-w-full w-full text-4xl mb-4 lg:mb-8"
+          texts={["Project Not Found", "404"]}
+        />
+        <p className="text-xs lg:text-base text-gray-500 mb-6 text-center">
+          The project you are looking for does not exist or may have been moved.
+        </p>
+        <Link href="/">
+          <RainbowButton className="h-12 flex justify-center items-center text-base font-space-grotesk px-8">
+            Back to works
+          </RainbowButton>
         </Link>
       </div>
-    </main>
+    </div>
   );
 }
