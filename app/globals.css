@@ -162,3 +162,13 @@ svg.radix-icon {
   flex-direction: column;
   gap: 1rem; /* spacing between items vertically */
 }
+
+@layer utilities {
+  @keyframes spin-slow {
+    to { transform: rotate(360deg); }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 15s linear infinite;
+    transform-origin: center;
+  }
+}
