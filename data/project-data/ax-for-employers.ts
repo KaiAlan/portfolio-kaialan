@@ -5,7 +5,7 @@ export const axForEmployers: Project = {
   pageLink: 'ax-for-employers',
   description: '',
   date: '',
-  tags: ['', ''],
+  tags: ['web', 'uiux'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/63pPrtTnhhUJJGTtf8TcLk/18cc6b763ab70fd0984b2a7b867b6809/ax_for_employer_screen_-_1.png',
   videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/7Ag9Y04MBH1y0GQepQLbEZ/ed51af66c39169757d12e869ef57c86f/ax_for_employers_preview.webm',
   clientProject: true,

@@ -6,7 +6,7 @@ export const nintiesUi: Project = {
   pageLink: '90-s-ui',
   description: '',
   date: '',
-  tags: ['', ''],
+  tags: ['graphics', 'branding'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/2QuwMKeVEVreJ6qe9JUoRB/433cc9b894507b2b1aa2750eab0c1234/random_-_2.png',
   // videoUrl: '',
   clientProject: false,

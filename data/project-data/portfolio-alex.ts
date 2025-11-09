@@ -6,7 +6,7 @@ export const portfolioAlex: Project = {
   pageLink: 'portfolio-alex',
   description: '',
   date: '',
-  tags: ['', ''],
+  tags: ['uiux', 'web'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/5WEqcaMuNZUdOyrsBkLsJU/4c6a7abf3347c416c3b908e26aa037aa/portfolio_alex_-_1.png',
   videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/2j7Eqwtw9PZ9tOufl8UJ3M/d42e898bdedddba5cc8ed96480286718/portfolio_nikhil_preview.webm',
   clientProject: true,

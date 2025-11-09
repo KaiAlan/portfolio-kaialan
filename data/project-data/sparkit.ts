@@ -6,7 +6,7 @@ export const sparkit: Project = {
   pageLink: 'sparkit',
   description: '',
   date: '',
-  tags: ['', ''],
+  tags: ['web', 'uiux'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/1cu1EBbP4Xc2dQj1AmnYKe/9b41f4676450621b35361b8f31137ada/sparkit_screen_-_1.png',
   // videoUrl: '',
   clientProject: false,

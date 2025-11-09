@@ -5,6 +5,8 @@ import { crystalPeak } from "../project-data/crystal-peak";
 import { h4bS3 } from "../project-data/h4b-s3";
 import { h4bS4 } from "../project-data/h4b-s4";
 import { h4bS4Graphics } from "../project-data/h4b-s4-graphics";
+import { hoodieEcom } from "../project-data/hoodie";
+import { jjkWebDesign } from "../project-data/jjk";
 import { liquidGlassSongPlayerUi } from "../project-data/liquid-glass-song-player";
 import { pixelArtOne } from "../project-data/pixel-art-1";
 import { portfolioAlex } from "../project-data/portfolio-alex";
@@ -13,11 +15,12 @@ import { portfolioRabi } from "../project-data/portfolio-rabi";
 import { portfolioSharonLara } from "../project-data/portfolio-sharon-lara";
 import { posters } from "../project-data/posters";
 import { sidebarGlassUi } from "../project-data/sidebar-glass-ui";
+import { signupScreen } from "../project-data/signup-screen";
 import { smmGurshan } from "../project-data/smm-gurshaan";
 import { sparkit } from "../project-data/sparkit";
 import { weatherCardWidgets } from "../project-data/weather-card-widgets";
 
-export type PageLinkType = 'axtionable' | 'ax-for-employers' | 'portfolio-alex' | 'portfolio-sharon-lara' | 'weather-card-widgets' | 'liquid-glass-song-player' | 'h4b-s3' | 'h4b-s4' | 'h4b-s4-graphics' | 'sparkit' | 'sidebar-glass-ui' | 'posters' | 'pixel-art-1' | '90-s-ui' | 'smm-gurshaan' | 'portfolio-rabi' | 'portfolio-himesh-mehta' | 'crystal-peak'
+export type PageLinkType = 'axtionable' | 'ax-for-employers' | 'portfolio-alex' | 'portfolio-sharon-lara' | 'weather-card-widgets' | 'liquid-glass-song-player' | 'h4b-s3' | 'h4b-s4' | 'h4b-s4-graphics' | 'sparkit' | 'sidebar-glass-ui' | 'posters' | 'pixel-art-1' | '90-s-ui' | 'smm-gurshaan' | 'portfolio-rabi' | 'portfolio-himesh-mehta' | 'crystal-peak' | 'jjk' | 'hoodie' | 'signup-screen-1'
 
 
 export type Project = {
@@ -40,12 +43,16 @@ export type Project = {
 }
 
 export const showcaseProject: Project[] = [
+  hoodieEcom,
+  smmGurshan,
   axtionable,
+  jjkWebDesign,
+  weatherCardWidgets,
   portfolioAlex,
   axForEmployers,
-  portfolioSharonLara,
-  weatherCardWidgets,
   liquidGlassSongPlayerUi,
+  portfolioSharonLara,
+  signupScreen,
   nintiesUi,
   crystalPeak,
   h4bS3,
@@ -56,7 +63,6 @@ export const showcaseProject: Project[] = [
   portfolioRabi,
   posters,
   sidebarGlassUi,
-  smmGurshan,
   sparkit,
 ];
 

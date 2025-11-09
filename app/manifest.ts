@@ -1,14 +1,26 @@
 export default function manifest() {
   return {
     name: 'Kaialan Portfolio',
-    short_name: 'Portfolio',
-    description: 'Portfolio showcasing design projects',
+    short_name: 'Kaialan',
+    description: 'Professional portfolio showcasing work in UI/UX, Web, Mobile and Brand design',
     start_url: '/',
     scope: "/",
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#000000',
     orientation: "portrait-primary",
+    lang: "en",
+    id: "/",
+    dir: "ltr",
+    categories: ["portfolio", "design", "personal", "brand", "freelancer"],
+    // screenshots: [
+    //   {
+    //     src: "/screenshots/home.png",
+    //     type: "image/png",
+    //     sizes: "1280x720"
+    //   }
+    // ],
+    display_override: ["standalone", "fullscreen"],
     prefer_related_applications: false,
     related_applications: [],
     icons: [

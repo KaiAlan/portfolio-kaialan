@@ -6,7 +6,7 @@ export const h4bS4Graphics: Project = {
   pageLink: 'h4b-s4-graphics',
   description: '',
   date: '',
-  tags: ['', ''],
+  tags: ['graphics', 'branding'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/77AkArAWxVe8gFylj6UDqy/529e5a580082c5bf0c884d15e2c52444/h4b_s4_posters_-_1.png',
   // videoUrl: '',
   clientProject: false,

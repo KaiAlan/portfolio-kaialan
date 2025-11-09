@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}`,
     images: [
       {
-        url: "/images/home-og.jpg",
+        url: "/images/og-default.jpg",
         width: 1200,
         height: 630,
         alt: "Portfolio Gallery - Kaialan Razz",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Kaialan Razz",
     description:
       "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
-    images: ["/images/home-twitter.jpg"],
+    images: ["/images/twitter-default.jpg"],
   },
 };
 

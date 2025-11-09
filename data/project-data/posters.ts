@@ -6,7 +6,7 @@ export const posters: Project = {
   pageLink: 'posters',
   description: '',
   date: '',
-  tags: ['', ''],
+  tags: ['graphics', 'branding'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/17in5VKCXG5FenPmKsCJUI/a25afca8e4bbb81130b50699864108d3/posters_-_1.png',
   // videoUrl: '',
   clientProject: false,

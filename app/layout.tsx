@@ -32,7 +32,7 @@ export const viewport: Viewport = {
 };
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "https://kaialan.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${siteUrl}`),
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: `${siteUrl}`,
     siteName: "Kaialan Razz",
-    title: "Kaialan | UI/UX and Brand Designer",
+    title: "Kaialan Razz | UI/UX and Brand Designer",
     description:
       "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
     images: [
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
         url: "/images/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "Kaialan Razz",
+        alt: "Kaialan Razz Portfolio Preview",
       },
     ],
   },
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@kaialan_",
     creator: "@kaialan_",
-    title: "Kaialan | UI/UX and Brand Designer",
+    title: "Kaialan Razz | UI/UX and Brand Designer",
     description:
       "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
     images: ["/images/twitter-default.jpg"],

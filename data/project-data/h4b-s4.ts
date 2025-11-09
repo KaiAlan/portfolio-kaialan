@@ -6,7 +6,7 @@ export const h4bS4: Project = {
   pageLink: 'h4b-s4',
   description: '',
   date: '',
-  tags: ['', ''],
+  tags: ['web', 'uiux'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/7327l2TmmKlLBGrrCT5Oza/5376d177bbabad869a4b71257b633c92/h4b_s4_screen_-_1.png',
   // videoUrl: '',
   clientProject: false,

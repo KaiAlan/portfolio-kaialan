@@ -1,13 +1,12 @@
-import { getAllProjects } from "@/lib/projects"
+import { showcaseProject } from "@/data/projects/showcase"
 
 const siteUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? 'https://kaialan.vercel.app'
 
 export default async function sitemap() {
-  const projects = await getAllProjects()
 
-  const projectUrls = projects.map((project) => ({
-    url: `${siteUrl}/projects/${project.slug}`,
-    lastModified: project.updatedAt || new Date(),
+  const projectUrls = showcaseProject.map((project) => ({
+    url: `${siteUrl}/projects/${project.pageLink}`,
+    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.8,
   }))
@@ -20,7 +19,19 @@ export default async function sitemap() {
       priority: 1,
     },
     {
-      url: `${siteUrl}/about`,
+      url: `${siteUrl}/about-me`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/gallery`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/services`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

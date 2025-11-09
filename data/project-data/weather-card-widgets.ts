@@ -6,7 +6,7 @@ export const weatherCardWidgets: Project = {
   pageLink: 'weather-card-widgets',
   description: '',
   date: '',
-  tags: ['', ''],
+  tags: ['web', 'uiux'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/6AUTpIY4dMCai2av4Bpvnm/7b00715a89a25c6f424f1cc356252378/wether_card_screen_-_1.png',
   videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/3vUaCMl39fMtnLjv8VJK3E/dfc2d968e602cb316e597564c5dd2c54/weather_card_preview.webm',
   clientProject: false,

@@ -6,7 +6,7 @@ export const sidebarGlassUi: Project = {
   pageLink: 'sidebar-glass-ui',
   description: '',
   date: '',
-  tags: ['', ''],
+  tags: ['web', 'uiux'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/4D9DMVk2HysHu0WZ0RDZZ2/45e9d2979805b38369667c7e3f1186ec/glass_ui_sidebar_-_1.png',
   // videoUrl: '',
   clientProject: false,
