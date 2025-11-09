@@ -4,9 +4,9 @@ import { Project } from "../projects/showcase";
 export const liquidGlassSongPlayerUi: Project = {
   name: 'Liquid Glass Song Player',
   pageLink: 'liquid-glass-song-player',
-  description: '',
-  date: '',
-  tags: ['uiux', ''],
+  description: 'Conceptual Apple-inspired song player UI, exploring engaging liquid glass effects, an experiment in bringing fresh, dynamic visuals to media controls',
+  date: 'July 2025',
+  tags: ['uiux', 'web'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/43x4HZct7DgqSgx3hqapza/193ed10894e1f819f5cd0666a5a13f2a/liquid_glass_player_ui_-_1.png',
   videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/2dIIAG8DwMazVYR6EXok14/dae75ea8590ec6434487c7a2d27176c5/liquid_glass_ui_preview.webm',
   clientProject: false,

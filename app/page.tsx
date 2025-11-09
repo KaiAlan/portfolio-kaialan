@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kaialan Razz",
     description:
-      "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
+      "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
     url: `${siteUrl}`,
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Kaialan Razz",
     description:
-      "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
+      "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
     images: ["/images/twitter-default.jpg"],
   },
 };

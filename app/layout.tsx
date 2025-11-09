@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     default: "Kaialan Razz | UI/UX and Brand Designer",
   },
   description:
-    "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
+    "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
   keywords: [
     "ui",
     "ux",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     siteName: "Kaialan Razz",
     title: "Kaialan Razz | UI/UX and Brand Designer",
     description:
-      "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
+      "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
     images: [
       {
         url: "/images/og-default.jpg",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     creator: "@kaialan_",
     title: "Kaialan Razz | UI/UX and Brand Designer",
     description:
-      "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
+      "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
     images: ["/images/twitter-default.jpg"],
   },
   verification: {

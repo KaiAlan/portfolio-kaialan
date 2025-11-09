@@ -4,8 +4,8 @@ import { Project } from "../projects/showcase";
 export const nintiesUi: Project = {
   name: '90s Ui',
   pageLink: '90-s-ui',
-  description: '',
-  date: '',
+  description: 'Brought retro vibes to life with a 90s-inspired UI pixel art, pastel panels, and nostalgic popups, experimenting with playful vintage design',
+  date: 'Jan 2025',
   tags: ['graphics', 'branding'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/2QuwMKeVEVreJ6qe9JUoRB/433cc9b894507b2b1aa2750eab0c1234/random_-_2.png',
   // videoUrl: '',

@@ -4,14 +4,14 @@ import { Project } from "../projects/showcase";
 export const h4bS3: Project = {
   name: 'Hack4Bengal Season 3',
   pageLink: 'h4b-s3',
-  description: '',
-  date: '',
+  description: 'Designed key visuals for Hack4Bengal Season 3, helping grow Eastern India’s largest hackathon and energize the tech community through engaging, impactful branding.',
+  date: 'Nov 2023',
   tags: ['web', 'uiux'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/1xrHUOIYAP01d0uYoAZttb/1e1ec7b4e32ab5c55dff7df4aea9dbdc/h4b_s3_screen_-_1.png',
   // videoUrl: '',
   clientProject: false,
-  cost: '',
-  turnaround: '',
+  cost: 'Community Work',
+  turnaround: '4 months',
   clientCameFrom: '',
   designTeam: '',
   projectImageUrls: ['https://images.ctfassets.net/xsgwjwcuxltx/1xrHUOIYAP01d0uYoAZttb/1e1ec7b4e32ab5c55dff7df4aea9dbdc/h4b_s3_screen_-_1.png',
@@ -26,5 +26,5 @@ export const h4bS3: Project = {
     'https://images.ctfassets.net/xsgwjwcuxltx/3koV71VbjBOI3uT6v6VWeD/fa8ef2f173dd216a616e9967e42582d1/h4b_s3_screen_-_10.png',
     'https://images.ctfassets.net/xsgwjwcuxltx/36uzSN1Vhuor6OHPlJIAFF/5d0eaeb91e36803478ea662386509ccd/h4b_s3_screen_-_11.png',
     'https://images.ctfassets.net/xsgwjwcuxltx/6t5FVU247syGv8w3jlm1Gi/03b3280b199ba5e787cc02168116dd5d/h4b_s3_screen_-_12.png'],
-  moreProjectPreviews: ['axtionable', 'liquid-glass-song-player', 'portfolio-alex']
+  moreProjectPreviews: ['h4b-s4', 'liquid-glass-song-player', 'hoodie']
 }

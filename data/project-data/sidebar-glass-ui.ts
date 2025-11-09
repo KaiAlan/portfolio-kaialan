@@ -4,8 +4,8 @@ import { Project } from "../projects/showcase";
 export const sidebarGlassUi: Project = {
   name: 'Liquid Glass Sidebar',
   pageLink: 'sidebar-glass-ui',
-  description: '',
-  date: '',
+  description: 'Experimented with Apple-inspired liquid glass effects for a sleek sidebar concept merging futuristic visuals and intuitive navigation in my UI explorations.',
+  date: 'July 2025',
   tags: ['web', 'uiux'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/4D9DMVk2HysHu0WZ0RDZZ2/45e9d2979805b38369667c7e3f1186ec/glass_ui_sidebar_-_1.png',
   // videoUrl: '',
