@@ -1,0 +1,19 @@
+import { Project } from "../projects/showcase";
+
+
+export const smmGurshan: Project = {
+  name: 'SMM Website',
+  pageLink: 'smm-gurshaan',
+  description: '',
+  date: '',
+  tags: ['', ''],
+  thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/pk67BMzMl21GRzKikU0y6/841b63dddeef215f1ba18a6fe4e85b69/smm_gurshaan_screen_-_1.png',
+  // videoUrl: '',
+  clientProject: false,
+  cost: '',
+  turnaround: '',
+  clientCameFrom: '',
+  designTeam: '',
+  projectImageUrls: ['https://images.ctfassets.net/xsgwjwcuxltx/pk67BMzMl21GRzKikU0y6/841b63dddeef215f1ba18a6fe4e85b69/smm_gurshaan_screen_-_1.png','https://images.ctfassets.net/xsgwjwcuxltx/6ieHhMTRb6UL8Wf0c4Si5s/a105aae3d6196bb2669f456508b2646d/smm_gurshaan_screen_-_2.png','https://images.ctfassets.net/xsgwjwcuxltx/7sG9Cr0SEEqLu4yWyP2mt0/0ef8f66fafec54f9f9b81dc73477e950/smm_gurshaan_screen_-_3.png','https://images.ctfassets.net/xsgwjwcuxltx/63XskQYzavnN6cPMfCJfFm/96449aab8912e04432a662b887fa8965/smm_gurshaan_screen_-_4.png', 'https://images.ctfassets.net/xsgwjwcuxltx/18GAhZgtZjS0ym4F7Ok18h/b8cd8f45e8c9d556d04dff54708f4043/smm_gurshaan_screen_-_5.png', 'https://images.ctfassets.net/xsgwjwcuxltx/2aNfVVUaJWWpSJyZ5dKdEA/3b36803a7e507994a8861ed396f01317/smm_gurshaan_screen_-_6.png', 'https://images.ctfassets.net/xsgwjwcuxltx/1FKtngTQfME4biMrCrbMFu/e032d411b7e024a8d85905b40eea1333/smm_gurshaan_screen_-_7.png', 'https://images.ctfassets.net/xsgwjwcuxltx/2PBz6rr3F8vWrnqLaxe6Fp/04cea672b3d00e173a11e8841f09eab7/smm_gurshaan_screen_-_8.png', 'https://images.ctfassets.net/xsgwjwcuxltx/7xG5V8eXY0rqDMpJiIf6XW/4541c08574ed31267c26df700ccce0a7/smm_gurshaan_screen_-_9.png', 'https://images.ctfassets.net/xsgwjwcuxltx/2wsEULcVhqSMc8RBKeGWi9/f12ec561ab979af01feab6678d2de9ff/smm_gurshaan_screen_-_10.png', 'https://images.ctfassets.net/xsgwjwcuxltx/3K1RKgi8gRFXJFYu7J9vI/980518e30b5db955650891ca45e3d3cc/smm_gurshaan_screen_-_11.png', 'https://images.ctfassets.net/xsgwjwcuxltx/2wrIqbXr7ZavcMHwFp4lAa/8dde1f73413f34b21fc6b89f51c4815a/smm_gurshaan_screen_-_12.png', 'https://images.ctfassets.net/xsgwjwcuxltx/23Bcif77G9PcJkZKJN7CGK/c874edc9620da606cc75c32f397daf2c/smm_gurshaan_screen_-_13.png', 'https://images.ctfassets.net/xsgwjwcuxltx/23Jm4aTjhXZDAv4leVZqJf/d16a07c97dd9c82feb3ac015ce20a7df/smm_gurshaan_screen_-_14.png', 'https://images.ctfassets.net/xsgwjwcuxltx/4A8noBywxSBoQS56aV8wDz/a629a35f9032903d807352735cd35841/smm_gurshaan_screen_-_15.png', 'https://images.ctfassets.net/xsgwjwcuxltx/1h1f0jYdWX7mPF8toY4Jyt/2a6735159249e440efd1db61e2ca1f04/smm_gurshaan_screen_-_16.png', 'https://images.ctfassets.net/xsgwjwcuxltx/6rQFLBTVMhtW80uC6z8msK/ce276262779b9da5a759c1fef02d6cd3/smm_gurshaan_screen_-_17.png', 'https://images.ctfassets.net/xsgwjwcuxltx/2mZs1SQYjRRuGVB1YA8tu1/71d7629e8fc9fc96df67064b2606b971/smm_gurshaan_screen_-_18.png', 'https://images.ctfassets.net/xsgwjwcuxltx/6E9RXQmhdM6jyimONQOSKc/a734b737967d9e5a9a4101fc17e18333/smm_gurshaan_screen_-_19.png', 'https://images.ctfassets.net/xsgwjwcuxltx/14vnEwc1LAm489XIF2Csfu/c4fda2904dd69d09a3e3d4d3a3ec1e24/smm_gurshaan_screen_-_20.png', 'https://images.ctfassets.net/xsgwjwcuxltx/4OvYbMNWxYBMCd9ro5UIZi/97f24810bd67a2fee4f587b6ceba05e2/smm_gurshaan_screen_-_21.png', 'https://images.ctfassets.net/xsgwjwcuxltx/51QPgTy7ZOxo1bmLAOOsYB/6eca0878b23d1b1fb65ab62406563875/smm_gurshaan_screen_-_22.png', 'https://images.ctfassets.net/xsgwjwcuxltx/5Zh7JY6bvzkKbeT653arfM/21f45f1e2aa3b339facb5612626eb3d3/smm_gurshaan_screen_-_23.png'],
+  moreProjectPreviews: ['axtionable', 'liquid-glass-song-player', 'portfolio-alex']
+}

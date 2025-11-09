@@ -1,13 +1,15 @@
 'use client'
 
+import { cn } from "@/lib/utils";
 import React, { useState, useEffect, useRef } from "react";
 
 interface VideoPreviewProps {
   name: string;
   videoUrl: string;
+  className?: string;
 }
 
-const VideoPreview: React.FC<VideoPreviewProps> = ({ name, videoUrl }) => {
+const VideoPreview: React.FC<VideoPreviewProps> = ({ name, videoUrl, className }) => {
   const [isVisible, setIsVisible] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,7 +47,7 @@ const VideoPreview: React.FC<VideoPreviewProps> = ({ name, videoUrl }) => {
   return (
     <div
       ref={containerRef}
-      className="group relative mb-2 w-full aspect-3/2 max-w-2xl bg-[#F6F6F5] rounded-sm hover:scale-95 transition-all duration-300 p-6 md:p-12"
+      className={cn("group relative mb-2 w-full aspect-3/2 max-w-2xl bg-[#F6F6F5] rounded-sm hover:scale-95 transition-all duration-300 p-6 md:p-12", className)}
     >
       {isVisible ? (
         <video

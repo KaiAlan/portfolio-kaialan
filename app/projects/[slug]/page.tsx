@@ -1,4 +1,3 @@
-import { allProjectDetails } from "@/data/projects/project-details";
 import OptimizedImage from "@/components/images/optimized-image-component";
 import Link from "next/link";
 import VideoPreview from "@/components/video-preview";
@@ -15,7 +14,7 @@ const domain =
 // --- Static params for Next.js 15 ---
 export function generateStaticParams() {
   // Return slug as param for each project based on pageLink
-  return allProjectDetails.map((proj) => ({ slug: proj.pageLink }));
+  return showcaseProject.map((proj) => ({ slug: proj.pageLink }));
 }
 
 // --- Metadata generation for SEO/OpenGraph ---
@@ -25,7 +24,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = allProjectDetails.find((proj) => proj.pageLink === slug);
+  const project = showcaseProject.find((proj) => proj.pageLink === slug);
   if (!project) {
     return {
       title: "Project Not Found",
@@ -69,7 +68,7 @@ const ProjectPage = async ({
   params: Promise<{ slug: string }>;
 }) => {
   const { slug } = await params;
-  const project = allProjectDetails.find((proj) => proj.pageLink === slug);
+  const project = showcaseProject.find((proj) => proj.pageLink === slug);
   if (!project) {
     const projectIsAddedToWorksPage = showcaseProject.find(
       (p) => p.pageLink === slug
@@ -142,6 +141,9 @@ const ProjectPage = async ({
           )}
         </div>
         <div className="w-full flex flex-col gap-4 mb-20">
+          {project.videoUrl && (
+            <VideoPreview name={project.name} videoUrl={project.videoUrl} className="max-w-full aspect-video" />
+          )}
           {project.projectImageUrls.map((item, idx) => {
             return (
               <OptimizedImage
