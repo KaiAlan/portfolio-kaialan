@@ -65,6 +65,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ projects }) => {
                 key={project.thumbnail}
                 href={`/projects/${project.pageLink}`}
                 className="w-full"
+                aria-lable={project.description}
               >
                 {project.videoUrl ? (
                   <VideoPreview
