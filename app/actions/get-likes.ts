@@ -6,10 +6,8 @@ export async function getLikeCount(): Promise<number> {
   const apiKey = process.env.COUNTERAPI_KEY!;
 
   try {
-    const res = await fetch(`https://api.counterapi.dev/v2/${namespace}/${counterName}`, {
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+    console.log(`https://api.counterapi.dev/v2/${namespace}/${counterName}`)
+    const res = await fetch(`https://api.counterapi.dev/v2/satyas-team-1613/kaialan-portfolio-likes`, {
       cache: "no-store", // always fresh
     });
 

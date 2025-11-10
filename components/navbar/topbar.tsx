@@ -9,22 +9,32 @@ import {
 } from "@radix-ui/react-icons";
 import { Button } from "../ui/button";
 import confetti from "canvas-confetti";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import OptimizedImage from "../images/optimized-image-component";
 import Link from "next/link";
 import { incrementLikeCount } from "@/app/actions/increase-likes";
 
-type TopbarProps = {
-  initialLikeCount: number;
-};
-
-
-const Topbar = ({ initialLikeCount }: TopbarProps) => {
+const Topbar = () => {
   const router = useRouter();
-  const [likeCount, setLikeCount] = useState(initialLikeCount || 469);
+  const [likeCount, setLikeCount] = useState<number | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
-  const handleClick = async() => {
+  useEffect(() => {
+    async function fetchLikes() {
+      try {
+        const res = await fetch("/api/likes");
+        const data = await res.json();
+        setLikeCount(data.value ?? 0);
+      } catch (error) {
+        console.error("Failed to fetch likes:", error);
+        setLikeCount(469); // fallback count to avoid blank UI
+      }
+    }
+
+    fetchLikes();
+  }, []);
+
+  const handleClick = async () => {
     const scalar = 2;
     const heart = confetti.shapeFromText({ text: "❤️", scalar });
 
@@ -60,19 +70,25 @@ const Topbar = ({ initialLikeCount }: TopbarProps) => {
         // fallback to center if ref missing
         confetti(defaults);
       }
-
     };
-    setLikeCount(prev => (prev ?? 0) + 1);
+    setLikeCount((prev) => (prev ?? 0) + 1);
 
-    
     setTimeout(shoot, 0);
     setTimeout(shoot, 100);
     setTimeout(shoot, 200);
+
     try {
-      const updatedCount = await incrementLikeCount();
-      setLikeCount(updatedCount);
-    } catch {
-      setLikeCount((prev) => (prev !== null ? prev - 1 : 0)); // rollback on fail
+      const res = await fetch("/api/likes/increment", { method: "POST" });
+      const data = await res.json();
+      if (!data.error) {
+      setLikeCount(data.value);
+    } else {
+      console.error("Increment error:");
+      throw Error('Error incrementing likes', data.error)
+    }
+    } catch (error) {
+      console.error("Increment error:", error);
+      setLikeCount((prev) => (prev !== null ? prev - 1 : 0));
     }
   };
 
@@ -96,15 +112,20 @@ const Topbar = ({ initialLikeCount }: TopbarProps) => {
           <ArrowRightIcon />
         </Button>
       </div>
-      <Link href='/' className='w-full sm:hidden flex justify-start items-center gap-2'>
+      <Link
+        href="/"
+        className="w-full sm:hidden flex justify-start items-center gap-2"
+      >
         <OptimizedImage
-          src='/images/profile.png'
-          alt='profile'
+          src="/images/profile.png"
+          alt="profile"
           width={16}
           height={16}
-          className='w-5 h-5 rounded-full'
+          className="w-5 h-5 rounded-full"
         />
-        <h1 className='text-left text-base text-black font-space-grotesk font-medium'>Kaialan Razz</h1>
+        <h1 className="text-left text-base text-black font-space-grotesk font-medium">
+          Kaialan Razz
+        </h1>
       </Link>
       <Button
         ref={buttonRef}

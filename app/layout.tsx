@@ -112,8 +112,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const totalLikes = await getLikeCount()
-
   return (
     <html lang="en">
       <body
@@ -122,7 +120,7 @@ export default async function RootLayout({
         <section className="relative w-full flex flex-col sm:flex-row">
           <Sidebar />
           <main className="w-full flex flex-col justify-start items-start gap-0">
-            <Topbar initialLikeCount={totalLikes} />
+            <Topbar />
             {children}
           </main>
           <MobileMenuBar />

@@ -6,11 +6,9 @@ export async function incrementLikeCount(): Promise<number> {
   const apiKey = process.env.COUNTERAPI_KEY!;
 
   try {
-    const res = await fetch(`https://api.counterapi.dev/v2/${namespace}/${counterName}/up`, {
+    console.log(`https://api.counterapi.dev/v2/${namespace}/${counterName}`)
+    const res = await fetch(`https://api.counterapi.dev/v2/satyas-team-1613/kaialan-portfolio-likes/up`, {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-      },
     });
 
     if (!res.ok) {
