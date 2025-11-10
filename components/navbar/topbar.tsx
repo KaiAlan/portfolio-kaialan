@@ -12,7 +12,7 @@ import confetti from "canvas-confetti";
 import { useEffect, useRef, useState } from "react";
 import OptimizedImage from "../images/optimized-image-component";
 import Link from "next/link";
-import { incrementLikeCount } from "@/app/actions/increase-likes";
+
 
 const Topbar = () => {
   const router = useRouter();

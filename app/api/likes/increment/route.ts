@@ -6,21 +6,31 @@ export async function POST() {
   const apiKey = process.env.COUNTERAPI_KEY!;
 
   try {
-    console.log("increment API route hit")
-    const res = await fetch(`https://api.counterapi.dev/v2/${namespace}/${counterName}/up`, {
+    const url = `https://api.counterapi.dev/v2/${namespace}/${counterName}/up`;
+    const res = await fetch(url, {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+      headers: { Authorization: `Bearer ${apiKey}` },
     });
 
+    const errText = await res.text();
+    console.log('POST to CounterAPI:', url);
+    console.log('Status:', res.status);
+    console.log('Body:', errText);
+
     if (!res.ok) {
-      return NextResponse.json({ error: "Failed to increment counter" }, { status: res.status });
+      return NextResponse.json(
+        { error: "Failed to increment counter", status: res.status, details: errText },
+        { status: res.status }
+      );
     }
 
-    const data = await res.json();
+    const data = JSON.parse(errText);
     return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json({ error: "Server increment error" }, { status: 500 });
+    console.error("Server error:", error);
+    return NextResponse.json(
+      { error: "Server error", details: error instanceof Error ? error.message : String(error) },
+      { status: 500 }
+    );
   }
 }
