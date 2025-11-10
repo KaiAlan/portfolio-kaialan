@@ -6,7 +6,9 @@ import { Analytics } from "@vercel/analytics/next";
 import Sidebar from "@/components/navbar/sidebar";
 import Topbar from "@/components/navbar/topbar";
 import MobileMenuBar from "@/components/navbar/mobile-menu";
-import { getLikeCount } from "./actions/get-likes";
+import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
+import { getQueryClient } from "./get-query-client";
+import Providers from "./provider";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -111,20 +113,25 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const queryClient = getQueryClient();
 
   return (
     <html lang="en">
       <body
         className={`${robotoMono.variable} ${inter.variable} ${spaceGrotesk.variable} antialiased flex flex-col justify-center items-center mx-auto relative bg-[#FCFCFC] text-[#000000]`}
       >
-        <section className="relative w-full flex flex-col sm:flex-row">
-          <Sidebar />
-          <main className="w-full flex flex-col justify-start items-start gap-0">
-            <Topbar />
-            {children}
-          </main>
-          <MobileMenuBar />
-        </section>
+        <Providers>
+          <section className="relative w-full flex flex-col sm:flex-row">
+            <Sidebar />
+            <main className="w-full flex flex-col justify-start items-start gap-0">
+              <HydrationBoundary state={dehydrate(queryClient)}>
+                <Topbar />
+                {children}
+              </HydrationBoundary>
+            </main>
+            <MobileMenuBar />
+          </section>
+        </Providers>
         <SpeedInsights />
         <Analytics />
       </body>
