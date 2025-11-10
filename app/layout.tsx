@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import Sidebar from "@/components/navbar/sidebar";
 import Topbar from "@/components/navbar/topbar";
 import MobileMenuBar from "@/components/navbar/mobile-menu";
+import { getLikeCount } from "./actions/get-likes";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -105,11 +106,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const totalLikes = await getLikeCount()
+
   return (
     <html lang="en">
       <body
@@ -118,7 +122,7 @@ export default function RootLayout({
         <section className="relative w-full flex flex-col sm:flex-row">
           <Sidebar />
           <main className="w-full flex flex-col justify-start items-start gap-0">
-            <Topbar />
+            <Topbar initialLikeCount={totalLikes} />
             {children}
           </main>
           <MobileMenuBar />

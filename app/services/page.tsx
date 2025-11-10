@@ -33,20 +33,7 @@ const services: ServiceType[] = [
     ],
     ctaLink: "https://cal.com/kaialan/intro?required-services=Website",
     recentProjectLink: "/?tab=web",
-    preview: "/images/services/web.png",
-  },
-  {
-    name: "Brand Design",
-    features: [
-      "Logo & Visual Identity",
-      "Brand Guidelines",
-      "Business Collateral (cards, docs)",
-      "Social/Digital Brand Assets",
-      "Consultation & Iterative Design",
-    ],
-    ctaLink: "https://cal.com/kaialan/intro?required-services=Branding",
-    recentProjectLink: "/?tab=branding",
-    preview: "/images/services/brand.png",
+    preview: "/images/services/web.webp",
   },
   {
     name: "Framer Development",
@@ -59,14 +46,27 @@ const services: ServiceType[] = [
     ],
     ctaLink: "https://cal.com/kaialan/intro?required-services=Framer Development",
     recentProjectLink: "/?tab=framer",
-    preview: "/images/services/framer.png",
+    preview: "/images/services/framer.webp",
+  },
+  {
+    name: "Brand Design",
+    features: [
+      "Logo & Visual Identity",
+      "Brand Guidelines",
+      "Business Collateral (cards, docs)",
+      "Social/Digital Brand Assets",
+      "Consultation & Iterative Design",
+    ],
+    ctaLink: "https://cal.com/kaialan/intro?required-services=Branding",
+    recentProjectLink: "/?tab=branding",
+    preview: "/images/services/brand.webp",
   },
 ];
 
 const Services = () => {
   return (
     <section className="w-full flex flex-col mx-auto">
-      <div className="sticky top-16 z-100 w-full flex flex-col md:flex-row justify-between items-start gap-2 px-5 py-5 bg-[#FCFCFC]">
+      <div className="sticky top-0 sm:top-16 z-100 w-full flex flex-col md:flex-row justify-between items-start gap-2 px-5 py-5 bg-[#FCFCFC]">
         <h1 className="text font-semibold">My Services</h1>
         <p className="max-w-xl text-wrap md:text-right text-sm text-[#929292]">
           I love designing.

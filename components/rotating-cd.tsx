@@ -36,10 +36,10 @@ const RotatingCD: React.FC<RotatingCDProps> = ({ className, width, height }) => 
         className="focus:outline-none"
       >
         <img
-          src="/red-cd.png"
+          src="/red-cd.webp"
           alt="red-cd"
-          width={width || 500}
-          height={height || 500}
+          width={width || 400}
+          height={height || 400}
           className={
             isPlaying
               ? "animate-spin-slow origin-center rotate-45"

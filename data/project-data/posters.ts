@@ -6,7 +6,7 @@ export const posters: Project = {
   pageLink: 'posters',
   description: 'Explored visual storytelling through a series of graphic posters—experimenting with style, composition, and bold character driven design',
   date: '2025',
-  tags: ['graphics', 'branding'],
+  tags: ['graphics'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/17in5VKCXG5FenPmKsCJUI/a25afca8e4bbb81130b50699864108d3/posters_-_1.png',
   // videoUrl: '',
   clientProject: false,

@@ -6,7 +6,7 @@ export const pixelArtOne: Project = {
   pageLink: 'pixel-art-1',
   description: 'Pixel Art Exploration for branding and creatives.',
   date: '2025',
-  tags: ['graphics', 'branding'],
+  tags: ['graphics'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/7rehYVSq1KwPZ5t09eJKr3/e59908b56531bafbaa693db3e1e2cc6c/pixel_art_-_1.png',
   // videoUrl: '',
   clientProject: false,

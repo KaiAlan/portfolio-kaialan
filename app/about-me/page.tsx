@@ -29,7 +29,7 @@ const AboutMe = () => {
         className="absolute bottom-full -left-16 sm:-bottom-32 sm:-left-56 2xl:-bottom-48 2xl:-left-96 w-[300px] sm:w-[600px] 2xl:w-[1000px] -z-1"
       /> */}
 
-      <RotatingCD className="sm:top-[70%] sm:-left-32" />
+      <RotatingCD className="sm:top-[75%] sm:-left-32" />
 
       {/* <RotatingCD /> */}
       <div className="w-full flex flex-col gap-20 mt-96 sm:mt-0">
@@ -37,28 +37,30 @@ const AboutMe = () => {
           <h1 className="font-semibold">About Me</h1>
           <p className="max-w-xl xl:max-w-2xl text-2xl sm:text-4xl text-black text-left font-semibold sm:leading-11">
             Based in India. Specializing in Web and Mobile (UI/UX) design.
-            Skilled in Branding, motion, prototyping and Framer. Defining the
+            Skilled in Branding, motion, prototyping and Framer. Designing the
             future.
           </p>
         </div>
-        <div className="w-full flex justify-end items-start mb-10">
-          <p className="w-4/5 max-w-xl xl:max-w-2xl text-sm text-black text-left font-space-grotesk">
+        <div className="w-full flex justify-end items-start mb-10 gap-10">
+          <h1 className="font-semibold opacity-0">About Me</h1>
+          <p className="max-w-xl xl:max-w-2xl text-sm text-black text-left font-space-grotesk">
             Hi, Im Satya(kaialan). Professionally a designer since 2023, i had a
             creative inkling since my childhood from painting to art and craft,
             desing has always fascinated me with joy, while i loved coding but i
             never felt the freedom of creativity thorugh it then i found the
-            vast world of UIUX and fell in love with designing. afterwards
+            vast world of UIUX and fell in love with designing. Afterwards
             worked with seniors, mentors from our communities, learnt and grown,
-            well still learning and exploring this world full of creativity.
+            and now designing for startups, individuals and brands while still
+            learning and exploring this world full of creativity.
           </p>
         </div>
       </div>
       <div className="w-full flex justify-end items-end mb-10">
-        <div className="max-w-xl xl:max-w-2xl grid grid-cols-2 gap-y-2 text-black text-xs font-space-grotesk font-medium tracking-wide">
+        <div className="max-w-xl xl:max-w-2xl grid grid-cols-3 sm:grid-cols-2 gap-y-2 text-black text-sm font-space-grotesk font tracking-wide gap-4 mt-12 sm:mt-0">
           {left.map((item, i) => (
             <>
               <span key={item}>{item}</span>
-              <span key={right[i]}>{right[i] ?? ""}</span>
+              <span key={right[i]} className="col-span-2 sm:col-span-1">{right[i] ?? ""}</span>
             </>
           ))}
         </div>

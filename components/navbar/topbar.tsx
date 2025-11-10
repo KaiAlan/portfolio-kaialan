@@ -12,13 +12,19 @@ import confetti from "canvas-confetti";
 import { useRef, useState } from "react";
 import OptimizedImage from "../images/optimized-image-component";
 import Link from "next/link";
+import { incrementLikeCount } from "@/app/actions/increase-likes";
 
-const Topbar = () => {
+type TopbarProps = {
+  initialLikeCount: number;
+};
+
+
+const Topbar = ({ initialLikeCount }: TopbarProps) => {
   const router = useRouter();
-  const [likeCount, setLikeCount] = useState(469);
+  const [likeCount, setLikeCount] = useState(initialLikeCount || 469);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
-  const handleClick = () => {
+  const handleClick = async() => {
     const scalar = 2;
     const heart = confetti.shapeFromText({ text: "❤️", scalar });
 
@@ -55,12 +61,19 @@ const Topbar = () => {
         confetti(defaults);
       }
 
-      setLikeCount(likeCount + 1);
     };
+    setLikeCount(prev => (prev ?? 0) + 1);
 
+    
     setTimeout(shoot, 0);
     setTimeout(shoot, 100);
     setTimeout(shoot, 200);
+    try {
+      const updatedCount = await incrementLikeCount();
+      setLikeCount(updatedCount);
+    } catch {
+      setLikeCount((prev) => (prev !== null ? prev - 1 : 0)); // rollback on fail
+    }
   };
 
   return (

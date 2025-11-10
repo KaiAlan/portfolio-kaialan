@@ -6,7 +6,7 @@ export const nintiesUi: Project = {
   pageLink: '90-s-ui',
   description: 'Brought retro vibes to life with a 90s-inspired UI pixel art, pastel panels, and nostalgic popups, experimenting with playful vintage design',
   date: 'Jan 2025',
-  tags: ['graphics', 'branding'],
+  tags: ['graphics'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/2QuwMKeVEVreJ6qe9JUoRB/433cc9b894507b2b1aa2750eab0c1234/random_-_2.png',
   // videoUrl: '',
   clientProject: false,

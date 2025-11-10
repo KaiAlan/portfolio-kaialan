@@ -42,10 +42,10 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ projects }) => {
             <div className="flex flex-col items-center w-full">
               <MorphingText
                 className="text-4xl mb-4 lg:mb-8"
-                texts={["Coming Soon", "Later"]}
+                texts={["Coming Soon", `${selectedTab.toUpperCase()}`]}
               />
               <p className="text-xs lg:text-base text-gray-500 mb-6 text-center">
-                This project is not publicly available yet, but it is in the
+                This projects are not publicly available yet, but it is in the
                 works.
                 <br />
                 Please check back later or explore other showcased projects in
@@ -65,7 +65,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ projects }) => {
                 key={project.thumbnail}
                 href={`/projects/${project.pageLink}`}
                 className="w-full"
-                aria-lable={project.description}
+                aria-label={project.description}
               >
                 {project.videoUrl ? (
                   <VideoPreview

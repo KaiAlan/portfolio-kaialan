@@ -6,7 +6,7 @@ export const h4bS4Graphics: Project = {
   pageLink: 'h4b-s4-graphics',
   description: 'Design for Hack4Bengal Season 4, refreshing the brand and energizing the hackathon community with bold, welcoming visuals.',
   date: 'Jan - April 2025',
-  tags: ['graphics', 'branding'],
+  tags: ['graphics'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/77AkArAWxVe8gFylj6UDqy/529e5a580082c5bf0c884d15e2c52444/h4b_s4_posters_-_1.png',
   // videoUrl: '',
   clientProject: false,

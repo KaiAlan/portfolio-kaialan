@@ -10,11 +10,11 @@ export default function GalleryPage() {
   useLenisScroll();
   return (
     <div className="relative w-full mx-auto">
-      <div className="sticky top-16 z-100 w-full flex flex-col md:flex-row justify-between items-start gap-2 px-5 py-5 bg-[#FCFCFC]">
+      <div className="sticky top-0 sm:top-16 z-100 w-full flex flex-col md:flex-row justify-between items-start gap-2 px-5 py-5 bg-[#FCFCFC]">
         <h1 className="text font-semibold">Gallery</h1>
         <p className="text-wrap md:text-right text-sm text-[#929292]">A collection of my design crafts, ideas, inspirations and pictures.</p>
       </div>
-      <div className="w-full mx-auto pb-2 px-5">
+      <div className="w-full min-h-screen mx-auto pb-2 px-5">
         {/* <PinterestMasonry images={thumbnailData} /> */}
         <ReactMasonryCss images={thumbnailData} />
         {/* <MasonryWithParallax images={thumbnailData} /> */}
