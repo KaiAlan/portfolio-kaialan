@@ -37,6 +37,8 @@ export const viewport: Viewport = {
 const siteUrl =
   process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "https://kaialan.vercel.app";
 
+const googleVerificationCode = process.env.GOOGLE_SITE_VERIFICATION ?? ''
+
 export const metadata: Metadata = {
   metadataBase: new URL(`${siteUrl}`),
   title: {
@@ -96,7 +98,7 @@ export const metadata: Metadata = {
     images: ["/images/twitter-default.jpg"],
   },
   verification: {
-    google: "your-google-verification-code",
+    google: `${googleVerificationCode}`,
     yandex: "your-yandex-verification-code", // if needed
   },
   alternates: {
