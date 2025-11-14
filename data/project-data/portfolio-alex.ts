@@ -8,7 +8,7 @@ export const portfolioAlex: Project = {
   date: 'June 2025',
   tags: ['uiux', 'web'],
   thumbnail: 'https://images.ctfassets.net/xsgwjwcuxltx/5WEqcaMuNZUdOyrsBkLsJU/4c6a7abf3347c416c3b908e26aa037aa/portfolio_alex_-_1.png',
-  videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/2j7Eqwtw9PZ9tOufl8UJ3M/d42e898bdedddba5cc8ed96480286718/portfolio_nikhil_preview.webm',
+  videoUrl: 'https://videos.ctfassets.net/xsgwjwcuxltx/62rPkS91QVTkgTVDEarngk/2ea60e83b1e4f749caf02429b3a2eef8/portfolio_alex_preview.webm',
   clientProject: true,
   cost: 'Private',
   turnaround: '1 week',
