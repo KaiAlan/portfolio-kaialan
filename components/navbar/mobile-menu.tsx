@@ -207,86 +207,182 @@ const SocialButtons = () => {
 //   );
 // };
 
-const HireMeCard = () => {
+// const HireMeCard = () => {
+//   const [open, setOpen] = useState(false);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setOpen(true);
+//     }, 5000); // 6.5 seconds delay
+
+//     return () => clearTimeout(timer); // Cleanup on unmount
+//   }, []);
+
+//   return (
+//     <div className="w-full flex justify-end absolute bottom-[calc(100%+8px)] right-0 z-10">
+//       <AnimatePresence>
+//         {open && (
+//           <motion.div
+//             key="popup"
+//             initial={{ opacity: 0, scaleY: 0.2, y: 20, borderRadius: "999px" }}
+//             animate={{
+//               opacity: 1,
+//               scaleY: 1,
+//               y: 0,
+//               borderRadius: "24px",
+//               transition: {
+//                 type: "spring",
+//                 stiffness: 300,
+//                 damping: 20,
+//                 mass: 0.8,
+//               },
+//             }}
+//             exit={{
+//               opacity: 0,
+//               scaleY: 0.2,
+//               y: 20,
+//               borderRadius: "999px",
+//               transition: {
+//                 type: "spring",
+//                 stiffness: 200,
+//                 damping: 25,
+//                 duration: 0.3,
+//               },
+//             }}
+//             style={{ originY: 1 }}
+//             className="w-2xs flex flex-col bg-[#EE5E32] mb-6 rounded-[6px] p-4 gap-5 shadow-xl"
+//           >
+//             {/* Popup Content */}
+//             <div className="w-full flex flex-col justify-start items-start gap-10">
+//               <div className="w-full flex justify-between items-center">
+//                 <span className="text-white text-sm">@kaialan_</span>
+//                 <Cross2Icon
+//                   onClick={() => setOpen(false)}
+//                   className="text-white w-5 h-5 cursor-pointer"
+//                 />
+//               </div>
+//               <p className="text-white text-left text-xl font-space-grotesk font-bold leading-6">
+//                 Crafting ever lasting Experiences & Identities
+//               </p>
+//             </div>
+//             <Link href="https://cal.com/kaialan/intro" className="w-full">
+//               <Button className="w-full h-9 bg-black text-white hover:bg-white hover:text-black font-semibold transition-all cursor-pointer rounded-2xl">
+//                 Book a Call
+//               </Button>
+//             </Link>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+
+//       {/* Animate button too */}
+//       <motion.div
+//         initial={{ opacity: 1, y: 0 }}
+//         animate={open ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+//         transition={{ type: "spring", stiffness: 300, damping: 30 }}
+//         className="absolute bottom-0 right-0"
+//       >
+//         <Button
+//           onClick={() => setOpen(true)}
+//           className="w-12 h-12 rounded-full mb-5 p-2 flex items-center justify-center cursor-pointer"
+//         >
+//           <GoogleMeetIcon style={{ width: 16, height: 16 }} />
+//         </Button>
+//       </motion.div>
+//     </div>
+//   );
+// };
+
+export const HireMeCard = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpen(true);
-    }, 5000); // 6.5 seconds delay
+    }, 5000);
 
-    return () => clearTimeout(timer); // Cleanup on unmount
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="w-full flex justify-end absolute bottom-[calc(100%+8px)] right-0 z-10">
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            key="popup"
-            initial={{ opacity: 0, scaleY: 0.2, y: 20, borderRadius: "999px" }}
-            animate={{
-              opacity: 1,
-              scaleY: 1,
-              y: 0,
-              borderRadius: "24px",
-              transition: {
-                type: "spring",
-                stiffness: 300,
-                damping: 20,
-                mass: 0.8,
-              },
-            }}
-            exit={{
-              opacity: 0,
-              scaleY: 0.2,
-              y: 20,
-              borderRadius: "999px",
-              transition: {
-                type: "spring",
-                stiffness: 200,
-                damping: 25,
-                duration: 0.3,
-              },
-            }}
-            style={{ originY: 1 }}
-            className="w-2xs flex flex-col bg-[#EE5E32] mb-6 rounded-[6px] p-4 gap-5 shadow-xl"
-          >
-            {/* Popup Content */}
-            <div className="w-full flex flex-col justify-start items-start gap-10">
+      <motion.div
+        layout
+        initial={false}
+        animate={{
+          borderRadius: open ? 24 : 999,
+          backgroundColor: open ? "#EE5E32" : "#000000",
+        }}
+        transition={{
+          layout: {
+            type: "spring",
+            stiffness: 200,
+            damping: 30,
+            mass: 1.2,
+          },
+          backgroundColor: {
+            duration: 0.5,
+            ease: "easeInOut",
+          },
+        }}
+        className={
+          open
+            ? "w-2xs mb-6 p-4 shadow-xl flex flex-col gap-5"
+            : "w-12 h-12 mb-5 p-2 rounded-full flex items-center justify-center cursor-pointer"
+        }
+        onClick={() => {
+          if (!open) setOpen(true);
+        }}
+      >
+        {open ? (
+          <>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{
+                duration: 0.2,
+                ease: "easeInOut",
+              }}
+              className="w-full flex flex-col justify-start items-start gap-10"
+            >
               <div className="w-full flex justify-between items-center">
                 <span className="text-white text-sm">@kaialan_</span>
                 <Cross2Icon
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setOpen(false);
+                  }}
                   className="text-white w-5 h-5 cursor-pointer"
                 />
               </div>
               <p className="text-white text-left text-xl font-space-grotesk font-bold leading-6">
                 Crafting ever lasting Experiences & Identities
               </p>
-            </div>
-            <Link href="https://cal.com/kaialan/intro" className="w-full">
-              <Button className="w-full h-9 bg-black text-white hover:bg-white hover:text-black font-semibold transition-all cursor-pointer rounded-2xl">
-                Book a Call
-              </Button>
-            </Link>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
 
-      {/* Animate button too */}
-      <motion.div
-        initial={{ opacity: 1, y: 0 }}
-        animate={open ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="absolute bottom-0 right-0"
-      >
-        <Button
-          onClick={() => setOpen(true)}
-          className="w-12 h-12 rounded-full mb-5 p-2 flex items-center justify-center cursor-pointer"
-        >
-          <GoogleMeetIcon style={{ width: 16, height: 16 }} />
-        </Button>
+            <motion.div
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 6 }}
+              transition={{
+                duration: 0.2,
+                ease: "easeInOut",
+                delay: 0.05,
+              }}
+            >
+              <Link href="https://cal.com/kaialan/intro" className="w-full">
+                <Button className="w-full h-9 bg-black text-white hover:bg-white hover:text-black font-semibold transition-all cursor-pointer rounded-2xl">
+                  Book a Call
+                </Button>
+              </Link>
+            </motion.div>
+          </>
+        ) : (
+          <GoogleMeetIcon
+            style={{ width: 16, height: 16 }}
+            className="text-white"
+          />
+        )}
       </motion.div>
     </div>
   );
