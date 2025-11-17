@@ -14,7 +14,7 @@ const MobileHero = () => {
         />
         <h1 className='w-full text-center text-2xl text-black font-space-grotesk font-semibold'>Kaialan Razz</h1>
       </div>
-      <p className='w-full text-base text-[#929292] text-center px-5'>UI/UX and Brand designer, currently Freelancing, building things that hopefully encourage us to lead more thoughtful lives.</p>
+      <p className='w-full text-base text-[#929292] text-center px-5'>UI/UX designer, currently Freelancing, building things that hopefully encourage us to lead more thoughtful lives.</p>
     </div>
   )
 }

@@ -2,7 +2,7 @@ export default function manifest() {
   return {
     name: 'Kaialan Portfolio',
     short_name: 'Kaialan',
-    description: 'My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design',
+    description: 'My creative corner, showcasing works in UI/UX, Web, Mobile design',
     start_url: '/',
     scope: "/",
     display: 'standalone',

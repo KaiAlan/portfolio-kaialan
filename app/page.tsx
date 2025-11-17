@@ -8,11 +8,11 @@ const siteUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "https://kaialan.vercel
 export const metadata: Metadata = {
   title: "Kaialan Razz",
   description:
-    "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile and Brand design",
+    "Professional portfolio showcasing kaialan's work in UI/UX, Web, Mobile design",
   openGraph: {
     title: "Kaialan Razz",
     description:
-      "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
+      "My creative corner, showcasing works in UI/UX, Web, Mobile design",
     url: `${siteUrl}`,
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Kaialan Razz",
     description:
-      "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
+      "My creative corner, showcasing works in UI/UX, Web, Mobile design",
     images: ["/images/twitter-default.jpg"],
   },
 };
@@ -64,7 +64,7 @@ export default async function HomePage() {
           "@type": "WebPage",
           name: "Kaialan Razz",
           description:
-            "Explore my projects in UI/UX, Web, Mobile and Brand design",
+            "Explore my projects in UI/UX, Web, Mobile design",
           url: `${siteUrl}`,
           author: {
             "@type": "Person",

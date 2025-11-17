@@ -43,10 +43,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(`${siteUrl}`),
   title: {
     template: "%s | Kaialan Razz",
-    default: "Kaialan Razz | UI/UX and Brand Designer",
+    default: "Kaialan Razz | UI/UX Designer",
   },
   description:
-    "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
+    "My creative corner, showcasing works in UI/UX, Web, Mobile design",
   keywords: [
     "ui",
     "ux",
@@ -76,9 +76,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: `${siteUrl}`,
     siteName: "Kaialan Razz",
-    title: "Kaialan Razz | UI/UX and Brand Designer",
+    title: "Kaialan Razz | UI/UX Designer",
     description:
-      "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
+      "My creative corner, showcasing works in UI/UX, Web, Mobile design",
     images: [
       {
         url: "/images/og-default.jpg",
@@ -92,14 +92,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@kaialan_",
     creator: "@kaialan_",
-    title: "Kaialan Razz | UI/UX and Brand Designer",
+    title: "Kaialan Razz | UI/UX Designer",
     description:
-      "My creative corner, showcasing my works in UI/UX, Web, Mobile and Brand design",
+      "My creative corner, showcasing works in UI/UX, Web, Mobile design",
     images: ["/images/twitter-default.jpg"],
   },
   verification: {
     google: `${googleVerificationCode}`,
-    yandex: "your-yandex-verification-code", // if needed
   },
   alternates: {
     canonical: `${siteUrl}`,

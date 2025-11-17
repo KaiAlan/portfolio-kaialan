@@ -36,6 +36,19 @@ const services: ServiceType[] = [
     preview: "/images/services/web.webp",
   },
   {
+    name: "Mobile Design",
+    features: [
+      "UI/UX Design for Mobile Apps",
+      "User Flow & Wireframing",
+      "High-Fidelity Prototyping",
+      "App Icon & Interface Assets",
+      "Design Review & Iteration Sessions",
+    ],
+    ctaLink: "https://cal.com/kaialan/intro?required-services=Mobile App",
+    recentProjectLink: "/?tab=mobile",
+    preview: "/images/services/brand.webp",
+  },
+  {
     name: "Framer Development",
     features: [
       "End-to-end Framer site builds",
@@ -44,23 +57,24 @@ const services: ServiceType[] = [
       "Animations, interactive elements",
       "SEO & performance optimization",
     ],
-    ctaLink: "https://cal.com/kaialan/intro?required-services=Framer Development",
+    ctaLink:
+      "https://cal.com/kaialan/intro?required-services=Framer Development",
     recentProjectLink: "/?tab=framer",
     preview: "/images/services/framer.webp",
   },
-  {
-    name: "Brand Design",
-    features: [
-      "Logo & Visual Identity",
-      "Brand Guidelines",
-      "Business Collateral (cards, docs)",
-      "Social/Digital Brand Assets",
-      "Consultation & Iterative Design",
-    ],
-    ctaLink: "https://cal.com/kaialan/intro?required-services=Branding",
-    recentProjectLink: "/?tab=branding",
-    preview: "/images/services/brand.webp",
-  },
+  // {
+  //   name: "Brand Design",
+  //   features: [
+  //     "Logo & Visual Identity",
+  //     "Brand Guidelines",
+  //     "Business Collateral (cards, docs)",
+  //     "Social/Digital Brand Assets",
+  //     "Consultation & Iterative Design",
+  //   ],
+  //   ctaLink: "https://cal.com/kaialan/intro?required-services=Branding",
+  //   recentProjectLink: "/?tab=branding",
+  //   preview: "/images/services/brand.webp",
+  // },
 ];
 
 const Services = () => {
@@ -134,12 +148,12 @@ const ServiceCard = ({ service }: { service: ServiceType }) => {
               </Button>
             </Link>
             <Link href={service.recentProjectLink} className="w-full">
-            <Button
-              variant="ghost"
-              className="w-full h-10 text-gray-400 font-medium p-3 cursor-pointer"
-            >
-              See recent projects
-            </Button>
+              <Button
+                variant="ghost"
+                className="w-full h-10 text-gray-400 font-medium p-3 cursor-pointer"
+              >
+                See recent projects
+              </Button>
             </Link>
           </div>
         </div>
@@ -221,7 +235,12 @@ const RefferCard = () => {
             >
               Share this portfolio
             </Button> */}
-            <SharePortfolio variant='secondary' className="w-full h-10 font-medium p-3 cursor-pointer">Share this portfolio</SharePortfolio>
+            <SharePortfolio
+              variant="secondary"
+              className="w-full h-10 font-medium p-3 cursor-pointer"
+            >
+              Share this portfolio
+            </SharePortfolio>
           </div>
         </div>
       </div>

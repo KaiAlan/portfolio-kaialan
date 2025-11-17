@@ -72,7 +72,7 @@ const Sidebar = () => {
               </Link>
             </div>
             <p className="text-[#929292] text-xs">
-              UI/UX and Brand designer, currently Freelancing, building things
+              UI/UX designer, currently Freelancing, building things
               that hopefully encourage us to lead more thoughtful lives.
             </p>
           </div>

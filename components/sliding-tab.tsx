@@ -12,9 +12,10 @@ type Tab = {
 
 const tabItems: Tab[] = [
   { label: "All", value: "all" },
-  { label: "UI/UX", value: "uiux" },
+  { label: "Web", value: "web" },
+  { label: "Mobile", value: "mobile" },
   { label: "Graphics", value: "graphics" },
-  { label: "Branding", value: "branding" },
+  // { label: "Branding", value: "branding" },
 ];
 
 export default function AnimatedTabsWithContent() {
