@@ -18,7 +18,7 @@ export default function MeetRedirect() {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(interval)
-          // router.push(`https://meet.google.com/${meetCode}`)
+          router.push(`https://meet.google.com/${meetCode}`)
           return 0
         }
         return prev - 1
