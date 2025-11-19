@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "meet.domain.com" }],
+      "destination": "https://meet.google.com/npu-skkj-rzd",
+      "permanent": true
+    }
+  ]
+}
