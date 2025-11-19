@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Google Meet | Kaialan",
   description:
     "I pray thee, grace this call with thy presence.",
+  metadataBase: new URL('https://meet.kaialan.com'),
   openGraph: {
     title: "Google Meet | Kaialan",
     description:
