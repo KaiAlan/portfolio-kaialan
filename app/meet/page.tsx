@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link';
 
-const meetCode = process.env.GOOGLE_MEET_CODE ?? ''
+const meetCode = process.env.NEXT_PUBLIC_GOOGLE_MEET_CODE ?? ''
 
 export default function MeetRedirect() {
   const router = useRouter()
   const [countdown, setCountdown] = useState(3)
+
+  console.log(meetCode)
 
   useEffect(() => {
     // Set up interval to update countdown every second
@@ -16,7 +18,7 @@ export default function MeetRedirect() {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(interval)
-          router.push(`https://meet.google.com/${meetCode}`)
+          // router.push(`https://meet.google.com/${meetCode}`)
           return 0
         }
         return prev - 1
