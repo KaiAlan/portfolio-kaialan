@@ -18,7 +18,7 @@ export default function MeetRedirect() {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(interval)
-          router.push(`https://meet.google.com/${meetCode}`)
+          // router.push(`https://meet.google.com/${meetCode}`)
           return 0
         }
         return prev - 1
@@ -29,7 +29,7 @@ export default function MeetRedirect() {
   }, [router])
 
   return (
-    <div className="w-full mx-auto flex flex-col items-center justify-center sm:justify-start min-h-screen p-5">
+    <div className="w-full mx-auto flex flex-col items-center justify-start min-h-screen p-5">
       <h1 className="text-2xl sm:text-4xl text-center font-semibold font-space-grotesk mt-12 mb-4">You are being redirected to Google Meet</h1>
       <p className="mb-4 text-xs text-center">
         If the redirect does not happen automatically,{' '}
